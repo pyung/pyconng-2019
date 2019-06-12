@@ -1,0 +1,17 @@
+// @import "bootstrap/bootstrap";
+@import "bootstrap";
+@import "font-awesome/font-awesome";
+@import "owl.carousel";
+@import "magnific-popup";
+@import "flexslider";
+@import "chosen";
+
+//At the end of the file
+@import "responsive";
+$primary_btn_color: #fe4918;
+@import "theme";
+@import "data-table";
+//Custom Styles
+@import "account";
+@import "reviews";
+@import "pre-style";

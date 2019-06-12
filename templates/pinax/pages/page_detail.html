@@ -1,0 +1,54 @@
+{% extends "symposion/base.html" %}
+{% load static pinax_boxes_tags %}
+
+{% load sitetree %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block body_class %}cms-page{% endblock %}
+
+{% block head_title %}{{ page.title }}{% endblock %}
+
+{% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
+{% block stylings %}
+  <style>
+  #intro-3{
+    height: 300px;
+  }
+  #intro-3-content {
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  #intro-3 .intro-txt h2 {
+      font-size: 40px;
+      line-height: 76px;
+  }
+  </style>
+{% endblock %}
+
+{% block body_tag %}
+<body>
+{% if editable %}
+    <div class="row">
+      <a href="{% url 'pages_page_edit' page.path %}" class="btn btn-sm btn-default">
+        <i class="fa fa-pencil"></i>
+          Edit this page
+      </a>
+    </div>
+    {% endif %}
+    {% block navigation %}
+      {% include "includes/nav_pre-launch.html" with class="home" %}
+      <!-- remove the class if we want to have a background color for the navbar -->
+  {% endblock %}
+    {{ page.body_html|safe }}
+    {% block footer %}
+    {{ block.super }}
+    {% endblock footer %}
+     {% block footer_2 %}
+     
+     {% endblock footer_2 %}
+    <script src="{% static 'designs/dist/9f30b84ddf0a13ca2b3a2ebe16b78543.js' %}"></script> </body>
+
+</body>
+{% endblock %}
+

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block stylings %}
+  <style>
+    h1 {
+      color: white;
+    }
+
+    .error-code {
+      margin-top: 40px;
+      font-size: 6em;
+      color: tomato;
+    }
+  </style>
+{% endblock %}
+
+{% block nav_pre_launch %}{% endblock %}
+
+{% block logo-images %}
+  <a class="navbar-brand logo-white" href="{% url 'home' %}">
+      <img src="{% static 'images/logo.svg' %}" alt="logo" height="60">
+  </a>
+{% endblock %}
+
+{% block title %}Internal Server Error{% endblock %}
+
+{% block content %}{% endblock %}
+
+
+{% block footer %}
+  <footer id="footer" class="bg-dark p-top-40 p-bottom-40 footer division">
+    <div class="container">
+      <div class="row">
+        <div id="footer-copyright" class="col-md-12 text-center">
+          <h1 class="error-code">Ooops!!!</h1>
+          <br />
+          <h1>Looks like something went wrong!</h1>
+          <br />
+          <p>We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, try refreshing.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}
