@@ -1,4 +1,4 @@
-<!doctype html> {% load static pinax_boxes_tags %} {% load hijack_tags %}
+<!doctype html> {% load static %} 
 
 <html lang="en">
 
@@ -22,7 +22,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'designs/dist/style.dbe15d5b.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.dbe15d5b.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'hijack/hijack-styles.css' %}" />
 
     <style>
@@ -545,7 +545,7 @@
 {% block body_tag %}
 
 <body class="{% block body_class %}{% endblock %}">
-    {% hijack_notification %}
+
     
     {% block navigation %}
     {% include "includes/navigation.html" %}
@@ -582,11 +582,11 @@
     {% block footer %}
     <footer id="footer">
         {% block footer_1 %}
-        {% box "footer_1" %}
+        {# {% box "footer_1" %} #}
       
         {% endblock footer_1 %}
         {% block footer_2 %}
-        {% box "footer_2" %}
+        {# {% box "footer_2" %} #}
         
         {% endblock footer_2 %}
         
