@@ -1,8 +1,8 @@
-from django.forms import ModelForm
+from django import forms
 from .models import Proposal
 
 
 class ProposalForm(forms.ModelForm):
     class Meta:
         model = Proposal
-        exclude = ('accepted', 'author',)
+        exclude = ('accepted', 'author','slug', 'submitted')

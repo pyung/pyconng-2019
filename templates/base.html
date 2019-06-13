@@ -1,605 +1,334 @@
-<!doctype html> {% load static %} 
+{% load static %} 
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Pycon">
-    <meta name="description" content="Pycon Conference Site" />
-    <meta name="keywords" content="Python, Pycon Nigeria 2018">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- FAVICON AND TOUCH ICONS  -->
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'images/icons/favicon.ico' %}" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/icons/apple-touch-icon-144x144.png' %}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/icons/apple-touch-icon-114x114.png' %}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/icons/apple-touch-icon-72x72.png' %}">
-    <link rel="apple-touch-icon" href="{% static 'images/icons/apple-touch-icon.png' %}">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/style.dbe15d5b.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'hijack/hijack-styles.css' %}" />
-
-    <style>
-        .content-box.editable,
-        .content-box {
-            display: flex;
-        }
-
-        a {
-            color: #02bc84
-        }
-
-        a:hover {
-            color: #02efa8;
-        }
-
-        p {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .btn-primary:hover {
-            background-color: #02bc84;
-        }
-
-        .btn-link {
-            font-weight: 400;
-            color: black !important;
-            background-color: transparent;
-        }
-
-        .btn-primary {
-            text-decoration: none;
-            padding: 15px 44px !important;
-            border: none !important;
-            font-weight: 700 !important;
-            border-radius: 0 !important;
-            color: black !important;
-            background-color: #02efa8;
-        }
-
-        .small-header,
-        .blog-header {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            position: relative;
-            height: 200px;
-            background-size: cover;
-            padding-bottom: 0;
-        }
-
-        .auth .dashboard-card .panel-heading {
-            display: -ms-flexbox;
-            display: flex;
-        }
-
-        .auth .dashboard-card .panel-heading h3 {
-            -ms-flex-item-align: start;
-            align-self: center;
-            margin: 0;
-        }
-
-        .auth .dashboard-card .panel-heading .card-header-actions {
-            -ms-flex-item-align: end;
-            align-self: flex-end;
-            margin-left: auto;
-        }
-
-        .auth .dashboard-card .panel-heading .card-header-actions .btn {
-            padding: 6px 20px;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .panel {
-            margin-bottom: 20px;
-            background-color: #fff;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-            width: 100%;
-        }
-
-        .panel-body {
-            padding: 15px;
-        }
-
-        .panel-heading {
-            padding: 10px 15px;
-            border-bottom: 1px solid transparent;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-
-        .panel-heading>.dropdown .dropdown-toggle {
-            color: inherit;
-        }
-
-        .panel-title {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 16px;
-            color: inherit;
-        }
-
-        .panel-title>.small,
-        .panel-title>.small>a,
-        .panel-title>a,
-        .panel-title>small,
-        .panel-title>small>a {
-            color: inherit;
-        }
-
-        .panel-footer {
-            padding: 10px 15px;
-            background-color: #f5f5f5;
-            border-top: 1px solid #ddd;
-            border-bottom-right-radius: 3px;
-            border-bottom-left-radius: 3px;
-        }
-
-        .panel>.list-group,
-        .panel>.panel-collapse>.list-group {
-            margin-bottom: 0;
-        }
-
-        .panel>.list-group .list-group-item,
-        .panel>.panel-collapse>.list-group .list-group-item {
-            border-width: 1px 0;
-            border-radius: 0;
-        }
-
-        .panel>.list-group:first-child .list-group-item:first-child,
-        .panel>.panel-collapse>.list-group:first-child .list-group-item:first-child {
-            border-top: 0;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-
-        .panel>.list-group:last-child .list-group-item:last-child,
-        .panel>.panel-collapse>.list-group:last-child .list-group-item:last-child {
-            border-bottom: 0;
-            border-bottom-right-radius: 3px;
-            border-bottom-left-radius: 3px;
-        }
-
-        .panel>.panel-heading+.panel-collapse>.list-group .list-group-item:first-child {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-        .panel-heading+.list-group .list-group-item:first-child {
-            border-top-width: 0;
-        }
-
-        .list-group+.panel-footer {
-            border-top-width: 0;
-        }
-
-        .panel>.panel-collapse>.table,
-        .panel>.table,
-        .panel>.table-responsive>.table {
-            margin-bottom: 0;
-        }
-
-        .panel>.panel-collapse>.table caption,
-        .panel>.table caption,
-        .panel>.table-responsive>.table caption {
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-
-        .panel>.table-responsive:first-child>.table:first-child,
-        .panel>.table:first-child {
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-
-        .panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child,
-        .panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child,
-        .panel>.table:first-child>tbody:first-child>tr:first-child,
-        .panel>.table:first-child>thead:first-child>tr:first-child {
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-
-        .panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child td:first-child,
-        .panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child th:first-child,
-        .panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child td:first-child,
-        .panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child th:first-child,
-        .panel>.table:first-child>tbody:first-child>tr:first-child td:first-child,
-        .panel>.table:first-child>tbody:first-child>tr:first-child th:first-child,
-        .panel>.table:first-child>thead:first-child>tr:first-child td:first-child,
-        .panel>.table:first-child>thead:first-child>tr:first-child th:first-child {
-            border-top-left-radius: 3px;
-        }
-
-        .panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child td:last-child,
-        .panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child th:last-child,
-        .panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child td:last-child,
-        .panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child th:last-child,
-        .panel>.table:first-child>tbody:first-child>tr:first-child td:last-child,
-        .panel>.table:first-child>tbody:first-child>tr:first-child th:last-child,
-        .panel>.table:first-child>thead:first-child>tr:first-child td:last-child,
-        .panel>.table:first-child>thead:first-child>tr:first-child th:last-child {
-            border-top-right-radius: 3px;
-        }
-
-        .panel>.table-responsive:last-child>.table:last-child,
-        .panel>.table:last-child {
-            border-bottom-right-radius: 3px;
-            border-bottom-left-radius: 3px;
-        }
-
-        .panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child,
-        .panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child,
-        .panel>.table:last-child>tbody:last-child>tr:last-child,
-        .panel>.table:last-child>tfoot:last-child>tr:last-child {
-            border-bottom-right-radius: 3px;
-            border-bottom-left-radius: 3px;
-        }
-
-        .panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child td:first-child,
-        .panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child th:first-child,
-        .panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child td:first-child,
-        .panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child th:first-child,
-        .panel>.table:last-child>tbody:last-child>tr:last-child td:first-child,
-        .panel>.table:last-child>tbody:last-child>tr:last-child th:first-child,
-        .panel>.table:last-child>tfoot:last-child>tr:last-child td:first-child,
-        .panel>.table:last-child>tfoot:last-child>tr:last-child th:first-child {
-            border-bottom-left-radius: 3px;
-        }
-
-        .panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child td:last-child,
-        .panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child th:last-child,
-        .panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child td:last-child,
-        .panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child th:last-child,
-        .panel>.table:last-child>tbody:last-child>tr:last-child td:last-child,
-        .panel>.table:last-child>tbody:last-child>tr:last-child th:last-child,
-        .panel>.table:last-child>tfoot:last-child>tr:last-child td:last-child,
-        .panel>.table:last-child>tfoot:last-child>tr:last-child th:last-child {
-            border-bottom-right-radius: 3px;
-        }
-
-        .panel>.panel-body+.table,
-        .panel>.panel-body+.table-responsive,
-        .panel>.table+.panel-body,
-        .panel>.table-responsive+.panel-body {
-            border-top: 1px solid #ddd;
-        }
-
-        .panel>.table>tbody:first-child>tr:first-child td,
-        .panel>.table>tbody:first-child>tr:first-child th {
-            border-top: 0;
-        }
-
-        .panel>.table-bordered,
-        .panel>.table-responsive>.table-bordered {
-            border: 0;
-        }
-
-        .panel>.table-bordered>tbody>tr>td:first-child,
-        .panel>.table-bordered>tbody>tr>th:first-child,
-        .panel>.table-bordered>tfoot>tr>td:first-child,
-        .panel>.table-bordered>tfoot>tr>th:first-child,
-        .panel>.table-bordered>thead>tr>td:first-child,
-        .panel>.table-bordered>thead>tr>th:first-child,
-        .panel>.table-responsive>.table-bordered>tbody>tr>td:first-child,
-        .panel>.table-responsive>.table-bordered>tbody>tr>th:first-child,
-        .panel>.table-responsive>.table-bordered>tfoot>tr>td:first-child,
-        .panel>.table-responsive>.table-bordered>tfoot>tr>th:first-child,
-        .panel>.table-responsive>.table-bordered>thead>tr>td:first-child,
-        .panel>.table-responsive>.table-bordered>thead>tr>th:first-child {
-            border-left: 0;
-        }
-
-        .panel>.table-bordered>tbody>tr>td:last-child,
-        .panel>.table-bordered>tbody>tr>th:last-child,
-        .panel>.table-bordered>tfoot>tr>td:last-child,
-        .panel>.table-bordered>tfoot>tr>th:last-child,
-        .panel>.table-bordered>thead>tr>td:last-child,
-        .panel>.table-bordered>thead>tr>th:last-child,
-        .panel>.table-responsive>.table-bordered>tbody>tr>td:last-child,
-        .panel>.table-responsive>.table-bordered>tbody>tr>th:last-child,
-        .panel>.table-responsive>.table-bordered>tfoot>tr>td:last-child,
-        .panel>.table-responsive>.table-bordered>tfoot>tr>th:last-child,
-        .panel>.table-responsive>.table-bordered>thead>tr>td:last-child,
-        .panel>.table-responsive>.table-bordered>thead>tr>th:last-child {
-            border-right: 0;
-        }
-
-        .panel>.table-bordered>tbody>tr:first-child>td,
-        .panel>.table-bordered>tbody>tr:first-child>th,
-        .panel>.table-bordered>thead>tr:first-child>td,
-        .panel>.table-bordered>thead>tr:first-child>th,
-        .panel>.table-responsive>.table-bordered>tbody>tr:first-child>td,
-        .panel>.table-responsive>.table-bordered>tbody>tr:first-child>th,
-        .panel>.table-responsive>.table-bordered>thead>tr:first-child>td,
-        .panel>.table-responsive>.table-bordered>thead>tr:first-child>th {
-            border-bottom: 0;
-        }
-
-        .panel>.table-bordered>tbody>tr:last-child>td,
-        .panel>.table-bordered>tbody>tr:last-child>th,
-        .panel>.table-bordered>tfoot>tr:last-child>td,
-        .panel>.table-bordered>tfoot>tr:last-child>th,
-        .panel>.table-responsive>.table-bordered>tbody>tr:last-child>td,
-        .panel>.table-responsive>.table-bordered>tbody>tr:last-child>th,
-        .panel>.table-responsive>.table-bordered>tfoot>tr:last-child>td,
-        .panel>.table-responsive>.table-bordered>tfoot>tr:last-child>th {
-            border-bottom: 0;
-        }
-
-        .panel>.table-responsive {
-            margin-bottom: 0;
-            border: 0;
-        }
-
-        .panel-group {
-            margin-bottom: 20px;
-        }
-
-        .panel-group .panel {
-            margin-bottom: 0;
-            border-radius: 4px;
-        }
-
-        .panel-group .panel+.panel {
-            margin-top: 5px;
-        }
-
-        .panel-group .panel-heading {
-            border-bottom: 0;
-        }
-
-        .panel-group .panel-heading+.panel-collapse>.list-group,
-        .panel-group .panel-heading+.panel-collapse>.panel-body {
-            border-top: 1px solid #ddd;
-        }
-
-        .panel-group .panel-footer {
-            border-top: 0;
-        }
-
-        .panel-group .panel-footer+.panel-collapse .panel-body {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .panel-default {
-            border-color: #ddd;
-        }
-
-        .panel-default>.panel-heading {
-            color: #333;
-            background-color: #f5f5f5;
-            border-color: #ddd;
-        }
-
-        .panel-default>.panel-heading+.panel-collapse>.panel-body {
-            border-top-color: #ddd;
-        }
-
-        .panel-default>.panel-heading .badge {
-            color: #f5f5f5;
-            background-color: #333;
-        }
-
-        .panel-default>.panel-footer+.panel-collapse>.panel-body {
-            border-bottom-color: #ddd;
-        }
-
-        .panel-primary {
-            border-color: #337ab7;
-        }
-
-        .panel-primary>.panel-heading {
-            color: #fff;
-            background-color: #337ab7;
-            border-color: #337ab7;
-        }
-
-        .panel-primary>.panel-heading+.panel-collapse>.panel-body {
-            border-top-color: #337ab7;
-        }
-
-        .panel-primary>.panel-heading .badge {
-            color: #337ab7;
-            background-color: #fff;
-        }
-
-        .panel-primary>.panel-footer+.panel-collapse>.panel-body {
-            border-bottom-color: #337ab7;
-        }
-
-        .panel-success {
-            border-color: #d6e9c6;
-        }
-
-        .panel-success>.panel-heading {
-            color: #3c763d;
-            background-color: #dff0d8;
-            border-color: #d6e9c6;
-        }
-
-        .panel-success>.panel-heading+.panel-collapse>.panel-body {
-            border-top-color: #d6e9c6;
-        }
-
-        .panel-success>.panel-heading .badge {
-            color: #dff0d8;
-            background-color: #3c763d;
-        }
-
-        .panel-success>.panel-footer+.panel-collapse>.panel-body {
-            border-bottom-color: #d6e9c6;
-        }
-
-        .panel-info {
-            border-color: #bce8f1;
-        }
-
-        .panel-info>.panel-heading {
-            color: #31708f;
-            background-color: #d9edf7;
-            border-color: #bce8f1;
-        }
-
-        .panel-info>.panel-heading+.panel-collapse>.panel-body {
-            border-top-color: #bce8f1;
-        }
-
-        .panel-info>.panel-heading .badge {
-            color: #d9edf7;
-            background-color: #31708f;
-        }
-
-        .panel-info>.panel-footer+.panel-collapse>.panel-body {
-            border-bottom-color: #bce8f1;
-        }
-
-        .panel-warning {
-            border-color: #faebcc;
-        }
-
-        .panel-warning>.panel-heading {
-            color: #8a6d3b;
-            background-color: #fcf8e3;
-            border-color: #faebcc;
-        }
-
-        .panel-warning>.panel-heading+.panel-collapse>.panel-body {
-            border-top-color: #faebcc;
-        }
-
-        .panel-warning>.panel-heading .badge {
-            color: #fcf8e3;
-            background-color: #8a6d3b;
-        }
-
-        .panel-warning>.panel-footer+.panel-collapse>.panel-body {
-            border-bottom-color: #faebcc;
-        }
-
-        .panel-danger {
-            border-color: #ebccd1;
-        }
-
-        .panel-danger>.panel-heading {
-            color: #a94442;
-            background-color: #f2dede;
-            border-color: #ebccd1;
-        }
-
-        .panel-danger>.panel-heading+.panel-collapse>.panel-body {
-            border-top-color: #ebccd1;
-        }
-
-        .panel-danger>.panel-heading .badge {
-            color: #f2dede;
-            background-color: #a94442;
-        }
-
-        .panel-danger>.panel-footer+.panel-collapse>.panel-body {
-            border-bottom-color: #ebccd1;
-        }
-        #content_footer_1.content-box, #content_footer_2.content-box{
-            display: block;
-        }
-        @media(max-width:768px){
-            .sidebar{
-                display: none;
-            }
-            #code-of-conduct{
-                margin-left: 0;
-            }
-            .visible-xs{
-                display: none;
-            }
-            .btn-primary{
-                padding: 15px 20px !important;
-            }
-        }
-    </style>
-    {% block extra_stylings %} {% endblock extra_stylings %}
-    <!-- SITE TITLE -->
-
-    <title>{% block head_title %}{{title}}{% endblock head_title %}Pycon Nigeria</title>
-
+  <meta charset="utf-8">
+  <title>Pycon</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/venobox/venobox.css' %}" rel="stylesheet">
+  <link href=" {% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
-{% block body_tag %}
 
-<body class="{% block body_class %}{% endblock %}">
+<body>
 
-    
-    {% block navigation %}
-    {% include "includes/navigation.html" %}
-    <!-- remove the class if we want to have a background color for the navbar -->
-    {% endblock %}
-    
-    {% block header-section %} {% endblock %}
+  <!--==========================
+    Header
+  ============================-->
+  {% block header %}
+  <header id="header">
+    <div class="container">
 
-    <div class="content-section container-fluid">
-        {% block sidebar-counter %}
-        <div class="sidebar">
-            <span class="python-start"> &#60;&#47; </span>
-            <div class="numbers">
-                <!-- Inserted with jQuery -->
-            </div>
-        </div>
-        {% endblock %}
-        {% block messages %}
-        <div class="main-content container">
-            {% if messages %}
-                {% for message in messages %}
-                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-                {% endfor %}
-            {% endif %} 
-            
-            {% block content %}{% endblock %} 
-            
-            {% block extra_body %}{% endblock extra_body %}
-        </div>
-        
-        {% endblock messages %}
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="{% static 'img/logo-light.svg' %}" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#supporters">Sponsors</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="buy-tickets"><a href="#buy-tickets">Sign Up</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
     </div>
+  </header><!-- #header -->
+  {% endblock header%}
 
-    {% block footer %}
-    <footer id="footer">
-        {% block footer_1 %}
-        {# {% box "footer_1" %} #}
-      
-        {% endblock footer_1 %}
-        {% block footer_2 %}
-        {# {% box "footer_2" %} #}
-        
-        {% endblock footer_2 %}
-        
-    </footer>
-    {% endblock %}
+  <!--==========================
+    Intro Section
+  ============================-->
+  
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">The Annual<br><span>Python Nigeria</span> Conference</h1>
+      <p class="mb-4 pb-0">25th - 28th September, 2019, Ibi conference center Abuja, Abuja, Nigeria</p>
+      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">About The Event</a>
+    </div>
+  </section>
 
-    <script src="{% static 'designs/dist/9f30b84ddf0a13ca2b3a2ebe16b78543.js' %}"></script>
-{% block js_script %}
+  <main id="main">
 
-{% endblock js_script %} </body>
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About The Event</h2>
+            <p>The PyConNG 2019 is the largest annual gathering of Python geeks in Nigeria. It is organised by members of the Python Users
+              Nigeria Group, a nonprofit organisation dedicated to advancing the Python community in Nigeria. Python developers
+              get to learn, network and collaborate during the workshops, it’s a place to be!</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <p>Ibi conference center Abuja, Nigeria</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>When</h3>
+            <p>Monday to Wednesday<br>September</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    
+
+      <!-- Modal Order Form -->
+      <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Buy Tickets</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                  <select id="ticket-type" name="ticket-type" class="form-control" >
+                    <option value="">-- Select Your Ticket Type --</option>
+                    <option value="standard-access">Standard Access</option>
+                    <option value="pro-access">Pro Access</option>
+                    <option value="premium-access">Premium Access</option>
+                  </select>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn">Buy Now</button>
+                </div>
+              </form>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+    
+
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        <p></p><br> Please contact <a mailto:href="JoeSixPack@Sixpacksrus.com"></a>JoeSixPack@Sixpacksrus.com</a> for any other inquiries.</p>
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Alias:</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Alias:</label>
+              <div class="controls">
+                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Multiple Radios (inline) -->
+            <br>
+            <div class="control-group">
+              <label class="control-label" for="humancheck">Humanity Check:</label>
+              <div class="controls">
+                <label class="radio inline" for="humancheck-0">
+                  <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+                <label class="radio inline" for="humancheck-1">
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+{% block content %}
+{% endblock content %}
+
+    
+
+  </main>
+  
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>-</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Designed by <a href="https://pythonnigeria.org/">pythonnigeria</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+{% block js%}
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock js %}
 </body>
-
-{% endblock body_tag %}
 
 </html>
