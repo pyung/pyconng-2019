@@ -114,3 +114,5 @@ dmypy.json
 .pyre/
 .sqlite3
 *.pyc
+*.pyc
+*.pyc
