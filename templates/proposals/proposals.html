@@ -1,22 +1,4 @@
 {% extends 'base.html' %}
-<<<<<<< HEAD
-
-
-    
-{% block content %}
-
-{% for proposal in proposals%}
-<a href="{% url 'update_proposals' proposal.slug %}" title="">{{proposal.title}}</a> <i>pending</i> 
-{% empty %}
-<section id="proposals" class="wow fadeInUp"></section>
-    <div class="container">
-      <div>
-        <h2>You have not submitted any proposals yet.?</h2>
-        <b><a href="{% url 'create_proposal'%}">Submit a Proposal?</a></b>
-      </div>
-    </div>
-</section>    
-=======
 <section id="speakers" class="wow fadeInUp">
 {%if object_list %}<h1>Your Submited Proposals</h1>{%endif%}
 {% block content%}
@@ -25,6 +7,5 @@
 {% empty %}
 <h2>You have not submitted any proposals yet.</h2>
 <b><a href="{% url 'proposals:create_proposal' %}">Submit a Proposal?</a></b>
->>>>>>> 1d4f37df1f94ab0d9f890f3a0340ed48bee86795
 {%endfor%}
 {% endblock content %}
