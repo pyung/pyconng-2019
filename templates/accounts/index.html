@@ -6,11 +6,46 @@
     Intro Section
   ============================-->
   {% block content %}
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">The Annual<br><span>Python Nigeria</span> Conference</h1>
+      <p class="mb-4 pb-0">25th - 28th September, 2019, Ibi conference center Abuja, Abuja, Nigeria</p>
+      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">About The Event</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About The Event</h2>
+            <p>The PyConNG 2019 is the largest annual gathering of Python geeks in Nigeria. It is organised by members of the Python Users
+              Nigeria Group, a nonprofit organisation dedicated to advancing the Python community in Nigeria. Python developers
+              get to learn, network and collaborate during the workshops, it’s a place to be!</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <p>Ibi conference center Abuja, Nigeria</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>When</h3>
+            <p>Monday to Wednesday<br>September</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--==========================
       Speakers Section
     ============================-->
-    <!-- <section id="speakers" class="wow fadeInUp">
+    <section id="speakers" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>Who will be speaking?</h2>
@@ -20,7 +55,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="{% static 'img/speakers/1.jpg' %}" alt="Speaker 1" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Brenden Legros</a></h3>
                 <p>Quas alias incidunt</p>
@@ -35,7 +70,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="{% static 'img/speakers/2.jpg' %}" alt="Speaker 2" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
                 <p>Consequuntur odio aut</p>
@@ -50,7 +85,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <img src="{% static 'img/speakers/3.jpg' %}" alt="Speaker 3" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
                 <p>Fugiat laborum et</p>
@@ -65,7 +100,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="{% static 'img/speakers/4.jpg' %}" alt="Speaker 4" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
                 <p>Debitis iure vero</p>
@@ -80,7 +115,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="{% static 'img/speakers/5.jpg' %}" alt="Speaker 5" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
                 <p>Qui molestiae natus</p>
@@ -95,7 +130,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <img src="{% static 'img/speakers/6.jpg' %}" alt="Speaker 6" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Willow Trantow</a></h3>
                 <p>Non autem dicta</p>
@@ -111,12 +146,12 @@
         </div>
       </div>
 
-    </section> -->
+    </section>
 
     <!--==========================
       Schedule Section
     ============================-->
-    <!-- <section id="schedule" class="section-with-bg">
+    <section id="schedule" class="section-with-bg">
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>what am i going to learn?</h2>
@@ -139,7 +174,7 @@
 
         
 
-        <div class="tab-content row justify-content-center"> -->
+        <div class="tab-content row justify-content-center">
 
           <!-- Schdule Day 1 -->
           <!-- <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
@@ -362,14 +397,14 @@
               </div>
             </div>
 
-          </div>  -->
+          </div> -->
           <!-- End Schdule Day 2 -->
 
-        <!-- </div>
+        </div>
 
       </div>
 
-    </section> -->
+    </section>
 
     <!--==========================
       Venue Section
@@ -385,15 +420,14 @@
 
         <div class="row no-gutters">
           <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15759.74643076117!2d7.4796359!3d9.06954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xafbe645f17c2dc3f!2sIBI+Centre!5e0!3m2!1sen!2sng!4v1560457646632!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31520.61850198357!2d7.468259475652185!3d9.056712664934299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0afc08e10b37%3A0xafbe645f17c2dc3f!2sIBI+Centre!5e0!3m2!1sen!2sng!4v1560457697599!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
 
           <div class="col-lg-6 venue-info">
             <div class="row justify-content-center">
               <div class="col-11 col-lg-8">
                 <h3>Ibi conference center Abuja, Nigeria</h3>
-                <p>World Class Centre for Training, Workshop, Events, and Conferences!
-                To enable you achieve excellence, we have created ergonomic training venues with futuristic technology and resources that enhance human potential to its fullest.</p>
+                
               </div>
             </div>
           </div>
@@ -406,32 +440,32 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/1.jpg" alt="" class="img-fluid">
+              <a href="{% static 'img/venue-gallery/1.jpg' %}" class="venobox" data-gall="venue-gallery">
+                <img src="{% static 'img/venue-gallery/1.jpg' %}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/2.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/2.jpg" alt="" class="img-fluid">
+              <a href="{% static 'img/venue-gallery/2.jpg' %}" class="venobox" data-gall="venue-gallery">
+                <img src="{% static 'img/venue-gallery/2.jpg' %}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/3.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/3.jpg" alt="" class="img-fluid">
+              <a href="{% static 'img/venue-gallery/3.jpg' %}" class="venobox" data-gall="venue-gallery">
+                <img src="{% static 'img/venue-gallery/3.jpg' %}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/4.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/4.jpg" alt="" class="img-fluid">
+              <a href="{% static 'img/venue-gallery/4.jpg' %}" class="venobox" data-gall="venue-gallery">
+                <img src="{% static 'img/venue-gallery/4.jpg' %}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -476,12 +510,12 @@
     <!--==========================
       Hotels Section
     ============================-->
-    <!-- <section id="hotels" class="section-with-bg wow fadeInUp">
+    <section id="hotels" class="section-with-bg wow fadeInUp">
 
       <div class="container">
         <div class="section-header">
           <h2>Hotels</h2>
-          <p>Her are some nearby hotels</p>
+          <p>Here are some nearby hotels</p>
         </div>
 
         <div class="row">
@@ -489,7 +523,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
+                <img src="{% static 'img//hotels/1.jpg' %}" alt="Hotel 1" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 1</a></h3>
               <div class="stars">
@@ -506,7 +540,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
+                <img src="{% static 'img//hotels/2.jpg' %}" alt="Hotel 2" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 2</a></h3>
               <div class="stars">
@@ -523,7 +557,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
+                <img src="{% static 'img//hotels/3.jpg' %}" alt="Hotel 3" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 3</a></h3>
               <div class="stars">
@@ -539,7 +573,7 @@
         </div>
       </div>
 
-    </section> -->
+    </section>
 
     <!--==========================
       Gallery Section
@@ -549,22 +583,19 @@
       <div class="container">
         <div class="section-header">
           <h2>Gallery</h2>
-          <p>Check our images from last year's edition</p>
+          <p>Check our gallery from the recent events</p>
         </div>
       </div>
 
       <div class="owl-carousel gallery-carousel">
-        {% for image in images %}
-        <a href="#" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/{{image}}' %}" alt=""></a>
-        {% endfor %}
-        <a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpg" alt=""></a>
-        <a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpg" alt=""></a>
-        <a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpg" alt=""></a>
-        <a href="img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/4.jpg" alt=""></a>
-        <a href="img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/5.jpg" alt=""></a>
-        <a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpg" alt=""></a>
-        <a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpg" alt=""></a>
-        <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg" alt=""></a>
+        <a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/1.jpg' %}" alt=""></a>
+        <a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/2.jpg' %}" alt=""></a>
+        <a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/3.jpg' %}" alt=""></a>
+        <a href="img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/4.jpg' %}" alt=""></a>
+        <a href="img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/5.jpg' %}" alt=""></a>
+        <a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/6.jpg' %}" alt=""></a>
+        <a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/7.jpg' %}" alt=""></a>
+        <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/8.jpg' %}" alt=""></a>
       </div>
 
     </section>
@@ -583,49 +614,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/andela@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/psf@2x.png' %}" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/cowrywise@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/paylater@2x.png' %}" class="img-fluid" alt="">
             </div>
           </div>
         
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/datamatrix@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/github@2x.png' %}" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/django@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/flutterwave@2x.png' %}" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/flutterwave@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/django@2x' %}" class="img-fluid" alt="">
             </div>
           </div>
         
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/github@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/datamatrix@2x' %}" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/paylater@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/cowrywise@2x.png' %}" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="img/supporters/psf@2x.png" class="img-fluid" alt="">
+              <img src="{% static 'img/supporters/andela@2x.png' %}" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -639,7 +670,7 @@
     <!--==========================
       Buy Ticket Section
     ============================-->
-    <!-- <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
       <div class="container">
 
         <div class="section-header">
@@ -651,8 +682,8 @@
           <div class="col-lg-4">
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-                <h6 class="card-price text-center">NGN150</h6>
+                <h5 class="card-title text-muted text-uppercase text-center">Student</h5>
+                <h6 class="card-price text-center">NGN5,000</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -672,8 +703,8 @@
           <div class="col-lg-4">
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-                <h6 class="card-price text-center">NGN250</h6>
+                <h5 class="card-title text-muted text-uppercase text-center">Personal</h5>
+                <h6 class="card-price text-center">NGN10,000</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -689,13 +720,13 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- Pro Tier -->
-          <!-- <div class="col-lg-4">
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-                <h6 class="card-price text-center">NGN350</h6>
+                <h6 class="card-price text-center">NGN20,000</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -715,7 +746,7 @@
           </div>
         </div>
 
-      </div> -->
+      </div>
 
       <!-- Modal Order Form -->
       <div id="buy-ticket-modal" class="modal fade">
@@ -799,6 +830,7 @@
 
   </main>
   {% endblock content %}
+  
 </body>
 
 </html>

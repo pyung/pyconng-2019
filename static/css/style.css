@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #f82249;
+  color: green;
   transition: 0.5s;
 }
 
@@ -72,7 +72,7 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #f82249;
+  background: green;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -114,7 +114,7 @@ h6 {
   display: block;
   width: 60px;
   height: 5px;
-  background: #f82249;
+  background: green;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -153,6 +153,7 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  background-color: rgba(6, 12, 34, 0.98);
 }
 
 #header.header-scrolled,
@@ -175,7 +176,7 @@ h6 {
 }
 
 #header #logo h1 span {
-  color: #f82249;
+  color: green;
 }
 
 #header #logo h1 a,
@@ -288,7 +289,7 @@ h6 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #f82249;
+  background-color: green;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -302,10 +303,10 @@ h6 {
 
 .nav-menu li.buy-tickets a {
   color: #fff;
-  background: #f82249;
+  background: green;
   padding: 7px 22px;
   border-radius: 50px;
-  border: 2px solid #f82249;
+  border: 2px solid green;
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   margin-left: 8px;
@@ -346,7 +347,7 @@ h6 {
 }
 
 .nav-menu ul li:hover > a {
-  background: #f82249;
+  background: green;
   color: #fff;
 }
 
@@ -413,7 +414,7 @@ h6 {
 }
 
 #mobile-nav ul li a:hover {
-  color: #f82249;
+  color: green;
 }
 
 #mobile-nav ul li li {
@@ -430,11 +431,11 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #f82249;
+  color: green;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #f82249;
+  color: green;
 }
 
 #mobile-body-overly {
@@ -469,7 +470,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/intro-bg.jpg) top center;
+  background: url(../img/pycon-homepage-bg.jpg) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -477,7 +478,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.8);
+  background: rgba(6, 12, 34, 0.493);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -517,7 +518,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro h1 span {
-  color: #f82249;
+  color: green;
 }
 
 #intro p {
@@ -529,7 +530,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
+  background: radial-gradient(green 50%, rgba(101, 111, 150, 0.15) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -576,7 +577,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .play-btn:hover::after {
-  border-left: 15px solid #f82249;
+  border-left: 15px solid green;
   -webkit-transform: scale(20);
   transform: scale(20);
 }
@@ -614,11 +615,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #f82249;
+  border: 2px solid green;
 }
 
 #intro .about-btn:hover {
-  background: #f82249;
+  background: green;
   color: #fff;
 }
 
@@ -742,7 +743,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker .details a:hover {
-  color: #f82249;
+  color: green;
 }
 
 #speakers .speaker:hover .details {
@@ -777,7 +778,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers-details .details .social a:hover {
-  background: #f82249;
+  background: green;
   color: #fff;
 }
 
@@ -789,6 +790,63 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #112363;
   font-size: 15px;
   margin-bottom: 10px;
+}
+/*--------------------------------------------------------------
+# proposal Section
+--------------------------------------------------------------*/
+
+#proposals {
+  padding: 80px 0 30px 0;
+  
+}
+
+
+
+#proposals .proposal {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#proposals .proposal .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#proposals .proposal .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#proposals .proposal .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#proposals .proposal .details .social {
+  height: 30px;
+}
+
+#proposals .proposal .details a {
+  color: #fff;
+}
+
+#proposals .proposal .details a:hover {
+  color: black;
+}
+
+#proposals .proposal:hover .details {
+  bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -822,7 +880,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #schedule .nav-tabs a.active {
-  background-color: #f82249;
+  background-color: green;
   color: #fff;
 }
 
@@ -995,7 +1053,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #hotels a:hover {
-  color: #f82249;
+  color: green;
 }
 
 #hotels .stars {
@@ -1045,7 +1103,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #gallery .owl-dot.active {
-  background-color: #f82249;
+  background-color: green;
 }
 
 #gallery .gallery-carousel .owl-stage-outer {
@@ -1053,7 +1111,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #gallery .gallery-carousel .center {
-  border: 6px solid #f82249;
+  border: 6px solid green;
   margin: -10px;
   box-sizing: content-box;
   padding: 4px;
@@ -1142,7 +1200,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #faq #faq-list a.collapse {
-  color: #f82249;
+  color: green;
 }
 
 #faq #faq-list a.collapsed {
@@ -1195,7 +1253,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
-  background: #f82249;
+  background: green;
   color: #fff;
   transition: all 0.3s ease;
   outline: none;
@@ -1255,7 +1313,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #f82249;
+  background-color: green;
   border: 0;
   color: #fff;
 }
@@ -1274,7 +1332,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #f82249;
+  background-color: green;
   border: 0;
   color: #fff;
 }
@@ -1300,7 +1358,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 48px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #f82249;
+  color: green;
 }
 
 #contact .contact-info address,
@@ -1322,7 +1380,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .contact-info a:hover {
-  color: #f82249;
+  color: green;
 }
 
 #contact .contact-address,
@@ -1332,8 +1390,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form #sendmessage {
-  color: #f82249;
-  border: 1px solid #f82249;
+  color: green;
+  border: 1px solid green;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1374,7 +1432,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"] {
-  background: #f82249;
+  background: green;
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -1396,7 +1454,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 0 0 25px 0;
   color: #eee;
   font-size: 14px;
+  width: 100%;
+  
+
+ 
 }
+
+
 
 #footer .footer-top {
   background: #040919;
@@ -1446,7 +1510,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #f82249;
+  background: green;
   color: #fff;
 }
 
@@ -1455,9 +1519,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
-  position: relative;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #f82249;
+  position: absolute;
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid green;
+  
 }
 
 #footer .footer-top .footer-links {
@@ -1472,7 +1537,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 5px;
-  color: #f82249;
+  color: green;
   font-size: 18px;
 }
 
@@ -1490,7 +1555,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #f82249;
+  color: green;
 }
 
 #footer .footer-top .footer-contact {
@@ -1512,7 +1577,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #f82249;
+  background: green;
   border: 0;
   width: 35%;
   padding: 6px 0;
