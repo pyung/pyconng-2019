@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 <section id="speakers" class="wow fadeInUp">
 <<<<<<< HEAD
+<<<<<<< HEAD
 {%if object_list %}<h1>Your Submited Proposals</h1>{%endif%}
 {% block content%}
 {% for proposal in object_list%}
@@ -9,6 +10,8 @@
 <h2>You have not submitted any proposals yet.</h2>
 <b><a href="{% url 'proposals:create_proposal' %}">Submit a Proposal?</a></b>
 =======
+=======
+>>>>>>> parent of 3bdef59... edit and style
 
 {% block content%}
 {% for proposal in proposals%}
@@ -16,6 +19,9 @@
 {% empty %}
 <h2>You have not submitted any proposals yet.</h2>
 <b><a href="{% url 'create_proposal'%}">Submit a Proposal?</a></b>
+<<<<<<< HEAD
+>>>>>>> parent of 3bdef59... edit and style
+=======
 >>>>>>> parent of 3bdef59... edit and style
 {%endfor%}
 {% endblock content%}
