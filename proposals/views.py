@@ -9,7 +9,7 @@ from django.shortcuts import reverse
 
 from .models import Proposal
 
-class ProposalListView(ListView):
+class ProposalListView(LoginRequiredMixin, ListView):
 
 	 model = Proposal
 	 template_name = 'proposals/proposals.html'
@@ -31,10 +31,12 @@ class ProposalCreateView(LoginRequiredMixin, CreateView):
 
 
 class ProposalUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = 'update_proposal.html'
+    template_name = 'proposals/create_proposal.html'
     form_class = ProposalForm
     model = Proposal
-    success_url = '/thanks/'
+    slug_field = 'slug'
+    slug_url_kwarg = 'proposal'
+    success_url = '../../thanks'
 
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.

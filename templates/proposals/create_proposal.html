@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 <section id="speakers" class="wow fadeInUp">
 <br><br><br><br><br><br>
 {% block content%}
 <form action="" method="post">
     {% csrf_token %}
-    <table>{{ form.as_table }}</table>
+    <table>{{ form|crispy }}</table>
     <input type="submit" value="Save" />
 </form>  
 {% endblock content%}
