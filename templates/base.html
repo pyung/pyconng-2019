@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +15,7 @@
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -55,9 +54,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          {%if request.user.is_authenticated %}
-          <li><b>Hello {{request.user}}!</b></li>
-          {%endif%}
+            {%if request.user.is_authenticated %}
+        <li><b>Hello {{request.user}}!</b></li>
+        {%endif%}
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <!-- <li><a href="#speakers">Speakers</a></li>
@@ -82,7 +81,7 @@
   <!--==========================
     Intro Section
   ============================-->
-
+  
   <section id="intro">
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0">The Annual<br><span>Python Nigeria</span> Conference</h1>
@@ -103,10 +102,8 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>About The Event</h2>
-            <p>The PyConNG 2019 is the largest annual gathering of Python geeks in Nigeria. It is organised by members
-              of the Python Users
-              Nigeria Group, a nonprofit organisation dedicated to advancing the Python community in Nigeria. Python
-              developers
+            <p>The PyConNG 2019 is the largest annual gathering of Python geeks in Nigeria. It is organised by members of the Python Users
+              Nigeria Group, a nonprofit organisation dedicated to advancing the Python community in Nigeria. Python developers
               get to learn, network and collaborate during the workshops, it’s a place to be!</p>
           </div>
           <div class="col-lg-3">
@@ -121,59 +118,59 @@
       </div>
     </section>
 
+    
 
+      <!-- Modal Order Form -->
+      <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Buy Tickets</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                  <select id="ticket-type" name="ticket-type" class="form-control" >
+                    <option value="">-- Select Your Ticket Type --</option>
+                    <option value="standard-access">Standard Access</option>
+                    <option value="pro-access">Pro Access</option>
+                    <option value="premium-access">Premium Access</option>
+                  </select>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn">Buy Now</button>
+                </div>
+              </form>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
-    <!-- Modal Order Form -->
-    <div id="buy-ticket-modal" class="modal fade">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Buy Tickets</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="#">
-              <div class="form-group">
-                <input type="text" class="form-control" name="your-name" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="your-email" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <select id="ticket-type" name="ticket-type" class="form-control">
-                  <option value="">-- Select Your Ticket Type --</option>
-                  <option value="standard-access">Standard Access</option>
-                  <option value="pro-access">Pro Access</option>
-                  <option value="premium-access">Premium Access</option>
-                </select>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn">Buy Now</button>
-              </div>
-            </form>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+</section>
+<br>
+{% block content %}
 
-    </section>
-    <br>
-    {% block content %}
-
-    {% endblock content %}
-    <br>
-
+{% endblock content %}
+<br>
+    
 
   </main>
-
+  
 
   <!--==========================
     Footer
   ============================-->
   <footer id="footer">
-
+    
 
     <div class="container">
       <div class="copyright">
@@ -193,7 +190,7 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-  {% block js%}
+{% block js%}
   <!-- JavaScript Libraries -->
   <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
@@ -210,7 +207,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'js/main.js' %}"></script>
-  {% endblock js %}
+{% endblock js %}
 </body>
 
 </html>
