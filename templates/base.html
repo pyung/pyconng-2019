@@ -49,7 +49,7 @@
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="#intro" class="scrollto"><img src="{% static 'img/logo-light.svg' %}" alt="" title=""></a>
+        <a href="{%url 'index'%}" class="scrollto"><img src="{% static 'img/logo-light.svg' %}" alt="" title=""></a>
       </div>
 
       <nav id="nav-menu-container">
@@ -78,45 +78,7 @@
   </header><!-- #header -->
   {% endblock header%}
 
-  <!--==========================
-    Intro Section
-  ============================-->
   
-  <section id="intro">
-    <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">The Annual<br><span>Python Nigeria</span> Conference</h1>
-      <p class="mb-4 pb-0">25th - 28th September, 2019, Ibi conference center Abuja, Abuja, Nigeria</p>
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
-      <a href="#about" class="about-btn scrollto">About The Event</a>
-    </div>
-  </section>
-
-  <main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>About The Event</h2>
-            <p>The PyConNG 2019 is the largest annual gathering of Python geeks in Nigeria. It is organised by members of the Python Users
-              Nigeria Group, a nonprofit organisation dedicated to advancing the Python community in Nigeria. Python developers
-              get to learn, network and collaborate during the workshops, it’s a place to be!</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>Where</h3>
-            <p>Ibi conference center Abuja, Nigeria</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>When</h3>
-            <p>Monday to Wednesday<br>September</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     
 
@@ -174,7 +136,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>-</strong>. All Rights Reserved
+        Built by Awesome folks at PythonNigeria Community
       </div>
       <div class="credits">
         <!--
@@ -183,7 +145,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
         -->
-        Designed by <a href="https://pythonnigeria.org/">pythonnigeria</a>
+        Template by <a href="bootstrapmade.com">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- #footer -->

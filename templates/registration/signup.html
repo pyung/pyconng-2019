@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<h2 class="d-flex justify-content-center">Login</h2>
+<h2 class="d-flex justify-content-center">Please Complete the registration form below.</h2>
+<p class="d-flex justify-content-center">Already have an account? <a href="{% url 'login' %}" title="Login here">Sign Up</a></p>
+
 <div class="d-flex justify-content-center">
 
 <form role="form" class="form-horizontal" method="post">
