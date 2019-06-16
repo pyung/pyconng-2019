@@ -1,1 +1,1 @@
-web: gunicorn pyconng-2019.wsgi
+web: gunicorn pyconng.wsgi
