@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY', '#g^v-%vj*lt05hb3vx#-pd3!9=zd4@%6htr_jo8h(sq#3p+b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mighty-brook-77151.herokuapp.com']
 
 
 # Application definition
