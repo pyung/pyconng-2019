@@ -1,0 +1,29 @@
+{% extends 'base.html' %}{% load static %}{% block content %}
+<div class="cont">
+<h2 class="d-flex justify-content-center">Welcome {{request.user}}!</h2>
+<div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'img/talk.png'%}" alt="Generic placeholder image" width='50px' height="50px">
+          <h2>Have something interesting to talk about?</h2>
+          <p>You can talk just about anything! including but not limited to scripting, webdevelopment, datascience, latest trends, how you use python in your daily activities, how to improve the python community... </p>
+          <p><a class="btn btn-default" href="{% url 'proposals:create_proposal'%}" role="button">Submit a talk proposal &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'img/profile.png'%}" alt="Generic placeholder image" width='50px' height="50px">
+          <h2>Update your Profile</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#" role="button">Update Profile &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'img/schedule.png'%}" alt="Generic placeholder image" width='50px' height="50px">
+          <h2>Event Schedule</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View Schedule &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+</div>
+
+{% endblock %}

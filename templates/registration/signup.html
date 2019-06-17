@@ -4,9 +4,10 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<div class="container" style="margin: 100px">
+<div class="container" style="padding-top:150px;">
+
 <h2 class="d-flex justify-content-center">Please Complete the registration form below.</h2>
-<p class="d-flex justify-content-center">Already have an account? <a href="{% url 'login' %}" title="Login here">Sign Up</a></p>
+<p class="d-flex justify-content-center">Already have an account?<a href="{% url 'login' %}" title="Login here">Login here</a></p>
 
 <div class="d-flex justify-content-center">
 
@@ -16,9 +17,7 @@
   {{ form |crispy}}
   <input type="submit" class="btn btn-success" value="Sign In">
 </div>
-<p>Don't have an account? <a href="{% url 'signup' %}" title="Sign Up">Sign Up</a></p>
 </form>
 </div>
 </div>
-
 {% endblock %}
