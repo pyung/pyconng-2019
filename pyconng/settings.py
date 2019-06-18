@@ -149,12 +149,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media'),
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-<<<<<<< HEAD
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
-=======
-
-LOGIN_REDIRECT_URL = 'dashboard'
->>>>>>> b0962c1b9b5dfb25d48b07d8f1faace9c3736313
