@@ -6,15 +6,6 @@
 
 {% block content%}
 <div class="container" style="margin-top: 132px">
-<<<<<<< HEAD
-{% for proposal in object_list%}
-<a href="{% url 'proposals:update_proposal' proposal.slug %}" title=""><b>{{proposal.title}}</b></a> <i>Approval pending</i><br>
-{% empty %}
-<h2>You have not submitted any proposals yet.</h2>
-<b><a href="{% url 'proposals:create_proposal' %}">Submit a Proposal?</a></b>
-{%endfor%}
-</div>>
-=======
     <div class="row">    
         {% for proposal in object_list%}
         <div class="col-md-8 mx-auto">
@@ -30,7 +21,6 @@
         </div>
     </div>
 </div>
->>>>>>> b0962c1b9b5dfb25d48b07d8f1faace9c3736313
 {% endblock content%}
 
 </section>
