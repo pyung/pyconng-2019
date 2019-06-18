@@ -24,9 +24,13 @@ class index(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super(index, self).get_context_data(**kwargs)
-		context['images'] = os.listdir(os.path.join(settings.STATICFILES_DIRS[0],'img', "past_event"))
+		#context['images'] = os.listdir(os.path.join(settings.STATICFILES_DIRS[0],'img', "past_event"))
 
 		return context
+
+class dashboard(TemplateView):
+	template_name = 'accounts/dashboard.html'
+
 
 
 def signup(request):

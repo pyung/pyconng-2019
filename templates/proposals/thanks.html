@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 <section id="speakers" class="wow fadeInUp">
-<br><br><br><br><br><br>
 {% block content%}
-<p> Thanks For submitting you talk. You will recieve an email notification once your talk is approved</p>
-<b><a href="{% url 'proposals:create_proposal'%}">Submit Another Talk?</a></b>
+<div class="cont">
+
+<div class="align-items-center">
+Thanks For submitting you talk. You will recieve an email notification once your talk is approved
+<p><b><a href="{% url 'proposals:create_proposal'%}">
+Submit Another Talk?</a></b></p>
+</div>
+
+
+</div>
 {% endblock content%}
 </section>
