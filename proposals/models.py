@@ -22,7 +22,7 @@ class Proposal(models.Model):
     )
 
     author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='proposals')
     title = models.CharField(max_length=250, blank=False, null=False, help_text='a short title of your talk')
     slug = models.SlugField(max_length=255, blank=False, null=False)
     category = models.CharField(max_length=2, choices=CATEGORIES, blank=False, null=False, help_text='Where does your talk fit in?')
