@@ -15,7 +15,7 @@ class ProposalListView(LoginRequiredMixin, ListView):
 	 template_name = 'proposals/proposals.html'
 
 	 def get_queryset(self):
-	 	return self.request.user.Proposals.all()
+	 	return self.request.user.proposals.all()
 
 
 class ProposalCreateView(LoginRequiredMixin, CreateView):
