@@ -30,9 +30,9 @@ def env(variable, default):
 SECRET_KEY = env('SECRET_KEY', '#g^v-%vj*lt05hb3vx#-pd3!9=zd4@%6htr_jo8h(sq#3p+bo+')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://pycon.pythonnigeria.org/', 'pycon.pythonnigeria.org/'] if not DEBUG else ['*']
 
 
 # Application definition
