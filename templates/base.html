@@ -50,11 +50,13 @@
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
         <a href="{%if request.user.is_authenticated %}{%url 'dashboard' %}{%else%}{%url 'index' %}{%endif%}" class="scrollto"><img src="{% static 'img/logo-light.svg' %}" alt="" title=""></a>
+
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           {% if request.get_full_path == "/" %}
+
 
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="{%url 'index'%}#about">About</a></li>
@@ -67,7 +69,6 @@
           <li><a href="#contact">Contact</a></li>
           <li><a href="{% url 'proposals:create_proposal' %}">Proposals</a></li>
           {%endif%}
-
 
           {%if request.user.is_authenticated %}
           <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>

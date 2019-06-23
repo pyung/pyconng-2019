@@ -35,6 +35,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['http://pycon.pythonnigeria.org/', 'pycon.pythonnigeria.org/'] if not DEBUG else ['*']
 
 
+
 # Application definition
 
 DJANGO_APPS = [
