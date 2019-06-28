@@ -31,6 +31,9 @@ class index(TemplateView):
 class dashboard(TemplateView):
 	template_name = 'accounts/dashboard.html'
 
+class TicketPricing(TemplateView):
+    template_name = 'accounts/tickets.html'
+
 
 
 def signup(request):

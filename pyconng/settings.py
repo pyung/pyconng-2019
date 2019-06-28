@@ -55,6 +55,7 @@ CUSTOM_APPS = [
 
 THIRD_PARTY_APPS = [
     'crispy_forms',
+    'paystack',
 ]
 
 
@@ -147,3 +148,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media'),
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'dashboard'
+
+PAYSTACK_SECRET_KEY = env(
+    "PAYSTACK_SECRET_KEY", default="sk_test_a551e347b4fc7af40b897f1fc217ce3642d1faa7"
+)
+PAYSTACK_PUBLIC_KEY = env(
+    "PAYSTACK_PUBLIC_KEY", default="pk_test_fbc2f1812af67479da1306edc72890e0702f052e"
+)
