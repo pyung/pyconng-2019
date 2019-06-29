@@ -50,7 +50,7 @@
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
         <a href="{%url 'index'%}" class="scrollto"><img src="{% static 'img/logo-light.png' %}" alt="" title=""></a>
-        <a href="{%if request.user.is_authenticated %}{%url 'dashboard' %}{%else%}{%url 'index' %}{%endif%}" class="scrollto"><img src="{% static 'img/logo-light.svg' %}" alt="" title=""></a>
+        <a href="{%if request.user.is_authenticated %}{%url 'dashboard' %}{%else%}{%url 'index' %}{%endif%}" class="scrollto"></a>
 
       </div>
 
@@ -73,7 +73,7 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li> -->
           <li><a href="{%url 'index'%}#contact">Contact</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
           <li><a href="{% url 'proposals:create_proposal' %}">Proposals</a></li>
           {%endif%}
 
