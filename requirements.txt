@@ -9,7 +9,7 @@ certifi==2019.6.16
 chardet==3.0.4
 Django==2.2.2
 django-crispy-forms==1.7.2
--e git+https://github.com/gbozee/django-paystack.git@fd2d44767e4c3531add523181eda8001c5ef6170#egg=django_paystack
+#-e git+https://github.com/gbozee/django-paystack.git@fd2d44767e4c3531add523181eda8001c5ef6170#egg=django_paystack
 future==0.17.1
 h11==0.8.1
 h2==3.1.0
@@ -36,3 +36,4 @@ python-dotenv==0.10.3
 dj-database-url==0.5.0
 whitenoise==4.1.2
 django_heroku
+dj-static==0.0.6

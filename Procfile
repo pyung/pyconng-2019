@@ -1,1 +1,1 @@
-web: gunicorn pyconng.wsgi
+web: gunicorn pyconng.wsgi --log-file -
