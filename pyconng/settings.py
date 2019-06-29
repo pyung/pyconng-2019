@@ -13,12 +13,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import dj_database_url
 import dotenv
-import django_heroku
-from django.core.wsgi import get_wsgi_application
-#from whitenoise.django import DjangoWhiteNoise
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
@@ -41,8 +38,7 @@ SECRET_KEY = env('SECRET_KEY', '#g^v-%vj*lt05hb3vx#-pd3!9=zd4@%6htr_jo8h(sq#3p+b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://pycon.pythonnigeria.org/', 'pycon.pythonnigeria.org/'] if not DEBUG else ['*']
-
+ALLOWED_HOSTS = ['http://pycon.pythonnigeria.org', 'pycon.pythonnigeria.org']
 
 
 # Application definition
@@ -64,7 +60,6 @@ CUSTOM_APPS = [
 
 THIRD_PARTY_APPS = [
     'crispy_forms',
-    'paystack',
     'dj_database_url',
 ]
 
@@ -158,14 +153,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
-
-LOGIN_REDIRECT_URL = 'dashboard'
-
-PAYSTACK_SECRET_KEY = env(
-    "PAYSTACK_SECRET_KEY", default="sk_test_a551e347b4fc7af40b897f1fc217ce3642d1faa7"
-)
-PAYSTACK_PUBLIC_KEY = env(
-    "PAYSTACK_PUBLIC_KEY", default="pk_test_fbc2f1812af67479da1306edc72890e0702f052e"
-)
-
-django_heroku.settings(locals())
