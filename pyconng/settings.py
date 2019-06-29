@@ -58,6 +58,7 @@ CUSTOM_APPS = [
 THIRD_PARTY_APPS = [
     'crispy_forms',
     'paystack',
+    'dj_database_url',
 ]
 
 
