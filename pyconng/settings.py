@@ -155,6 +155,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media'),
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+Temp_Path = os.path.realpath('.')
 TEMPLATE_DIRS = (
     Temp_Path +"/template"
 )
