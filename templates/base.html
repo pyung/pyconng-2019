@@ -50,6 +50,8 @@
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
         <a href="{%url 'index'%}" class="scrollto"><img src="{% static 'img/logo-light.png' %}" alt="" title=""></a>
+        <a href="{%if request.user.is_authenticated %}{%url 'dashboard' %}{%else%}{%url 'index' %}{%endif%}" class="scrollto"><img src="{% static 'img/logo-light.svg' %}" alt="" title=""></a>
+
       </div>
 
       <nav id="nav-menu-container">
@@ -59,6 +61,9 @@
             <font color="green" size="2"><li><b>Hello {{request.user}}!</b></li></font>
         
         {%endif%}
+          {% if request.get_full_path == "/" %}
+
+
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="{%url 'index'%}#about">About</a></li>
           <!-- <li><a href="#speakers">Speakers</a></li>
@@ -68,8 +73,12 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li> -->
           <li><a href="{%url 'index'%}#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="{% url 'proposals:create_proposal' %}">Proposals</a></li>
+          {%endif%}
+
           {%if request.user.is_authenticated %}
-          <li><a href="{% url 'proposals:home' %}">Proposals</a></li>
+          <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'pricing' %}">Purchase Ticket</a></li>
           <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
           {%else%}
           <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>

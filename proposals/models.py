@@ -32,6 +32,7 @@ class Proposal(models.Model):
     audience = models.CharField(max_length=2, choices=AUDIENCE, default='E', help_text='Who are your target audience?')
     about_author = models.TextField(blank=False, null=False, help_text='Let us know a little more about you')
     website = models.URLField(blank=True, null=True, help_text='have a link to your personal website/blog?')
+    profile_picture = models.ImageField(upload_to = 'pic_folder/', help_text='a nice image of you')
     submitted = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(auto_now_add=True)
     accepted = models.BooleanField(default=False)

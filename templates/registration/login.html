@@ -17,6 +17,11 @@
         <input type="submit" class="btn btn-md" value="Sign Up">
       </div>
       <p>Don't have an account? <a href="{% url 'signup' %}" title="Sign Up">Sign Up</a></p>
+        <input type="hidden" name="next" value="{% url 'dashboard' %}" />
+
+        <input type="submit" class="btn btn-md" value="Sign In">
+      </div>
+      <p>Don't have an account? <aS href="{% url 'signup' %}" title="Sign Up">Sign Up</a></p>
       </form>
       </div>
     </div>
