@@ -37,4 +37,3 @@ dj-database-url==0.5.0
 whitenoise==4.1.2
 django_heroku
 dj-static==0.0.6
-#paystack==1.5.0
