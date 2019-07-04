@@ -78,7 +78,7 @@
           {%endif%}
 
           {%if request.user.is_authenticated %}
-          <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'pricing' %}">Purchase Ticket</a></li>
+          <!-- <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'pricing' %}">Purchase Ticket</a></li> -->
           <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
           {%else%}
           <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>

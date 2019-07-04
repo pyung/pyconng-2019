@@ -1,4 +1,4 @@
-{% extends 'base.html' %}{% load static %} 
+{% extends 'base.html' %}{% load static %} {% load paystack %}
 
 
 
@@ -672,7 +672,8 @@
     <!--==========================
       Buy Ticket Section
     ============================-->
-    <!-- <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+    {%if request.user.is_authenticated %}
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
       <div class="container">
 
         <div class="section-header">
@@ -684,8 +685,8 @@
           <div class="col-lg-4">
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-                <h6 class="card-price text-center">NGN150</h6>
+                <h5 class="card-title text-muted text-uppercase text-center">Students</h5>
+                <h6 class="card-price text-center">NGN5000</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -705,8 +706,8 @@
           <div class="col-lg-4">
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-                <h6 class="card-price text-center">NGN250</h6>
+                <h5 class="card-title text-muted text-uppercase text-center">Individual</h5>
+                <h6 class="card-price text-center">NGN8000</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -722,13 +723,13 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div> 
           <!-- Pro Tier -->
-          <!-- <div class="col-lg-4">
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-                <h6 class="card-price text-center">NGN350</h6>
+                <h5 class="card-title text-muted text-uppercase text-center">Corporate</h5>
+                <h6 class="card-price text-center">NGN15000</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -748,7 +749,8 @@
           </div>
         </div>
 
-      </div> -->
+      </div>
+      {%endif%}
 
       <!-- Modal Order Form -->
       <div id="buy-ticket-modal" class="modal fade">

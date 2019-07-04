@@ -22,7 +22,7 @@ class TicketPurchase(models.Model):
                                related_name='purchases', on_delete=models.CASCADE)
     assignee = models.OneToOneField(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='ticket')
-    payment_ref = models.CharField(max_length=50)
+    payment_ref = models.CharField(max_length=50, )
     date_purchased = models.DateTimeField(auto_now_add=True)
 
 

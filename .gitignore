@@ -114,3 +114,6 @@ dmypy.json
 .sqlite3
 *.pyc
 '.env' 
+
+
+settings.py
