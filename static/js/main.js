@@ -13,6 +13,15 @@ jQuery(document).ready(function( $ ) {
     return false;
   });
 
+  $('#moreLess').click(function myFunction() {
+    var x = $("#moreLess");
+    if (x.text() === "More") {
+      x.text("Less");
+    } else {
+      x.text("More");
+    }
+  });
+
   // Header fixed on scroll
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {

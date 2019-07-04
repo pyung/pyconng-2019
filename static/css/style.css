@@ -946,7 +946,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #152b79;
   margin-bottom: 0;
 }
-
+.aboutheight {
+  line-height: 23px;
+  font-weight: 200;
+}
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
@@ -1017,13 +1020,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Hotels Section
 --------------------------------------------------------------*/
 
-#hotels {
+#features {
   padding: 60px 0;
 }
 
-#hotels .hotel {
-  border: 1px solid #e0e5fa;
-  background: #fff;
+#features .mx-auto {
   margin-bottom: 30px;
 }
 
