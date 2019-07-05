@@ -1,1 +1,1 @@
-web: gunicorn pyconng.wsgi --log-file -
+web: gunicorn pyconng.wsgi --preload --workers 1
