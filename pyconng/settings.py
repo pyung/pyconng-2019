@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import dj_database_url
 import dotenv
+import pdb
+from django.dispatch import receiver
+from hubspot.signals import payment_verified
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,6 +31,17 @@ def env(variable, default):
     except:
         return default
 
+@receiver(signals.successful_payment_signal)
+def on_successful_payment(sender, **kwargs):
+    pdb.set_trace()
+    pass
+
+@receiver(payment_verified)
+def on_payment_verified(sender, ref,amount, **kwargs):
+    """
+    amount: .
+    """
+    pass
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/

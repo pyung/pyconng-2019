@@ -117,3 +117,5 @@ dmypy.json
 
 
 settings.py
+
+.vscode/
