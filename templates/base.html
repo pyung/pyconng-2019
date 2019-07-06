@@ -57,8 +57,6 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
             {%if request.user.is_authenticated %}
-            
-            <font color="green" size="2"><li><b>Hello {{request.user}}!</b></li></font>
         
         {%endif%}
           {% if request.get_full_path == "/" %}
@@ -78,7 +76,9 @@
           {%endif%}
 
           {%if request.user.is_authenticated %}
-          <!-- <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'pricing' %}">Purchase Ticket</a></li> -->
+            
+          <font color="green" size="2"><li><b>Hello {{request.user}}!</b></li></font>
+         <!-- <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'pricing' %}">Purchase Ticket</a></li>-->
           <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
           {%else%}
           <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>

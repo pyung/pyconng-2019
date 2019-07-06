@@ -14,8 +14,6 @@ import os
 import dj_database_url
 import dotenv
 import pdb
-from django.dispatch import receiver
-from hubspot.signals import payment_verified
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,18 +28,6 @@ def env(variable, default):
         return value
     except:
         return default
-
-@receiver(signals.successful_payment_signal)
-def on_successful_payment(sender, **kwargs):
-    pdb.set_trace()
-    pass
-
-@receiver(payment_verified)
-def on_payment_verified(sender, ref,amount, **kwargs):
-    """
-    amount: .
-    """
-    pass
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -116,8 +102,16 @@ WSGI_APPLICATION = 'pyconng.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'back',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres1',
+        'HOST': 'localhost'
+    }
+}
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
