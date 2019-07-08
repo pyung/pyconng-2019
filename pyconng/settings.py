@@ -103,9 +103,11 @@ WSGI_APPLICATION = 'pyconng.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
 }
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -162,5 +164,6 @@ PAYSTACK_PUBLIC_KEY = env(
     "PAYSTACK_PUBLIC_KEY", default="pk_test_bf89c9aa71c369665787696149bf8fcfffefc3a6"
 )
 
+PAYSTACK_SUCCESS_URL='dashboard'
 
 

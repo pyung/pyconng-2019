@@ -26,6 +26,8 @@
   <link href="{% static 'lib/venobox/venobox.css' %}" rel="stylesheet">
   <link href=" {% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
+  <link href="{% static 'css/toastr.min.css' %}" rel="stylesheet">
+
   <!-- Main Stylesheet File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
@@ -77,8 +79,8 @@
           {%endif%}
 
           {%if request.user.is_authenticated %}
-            
-         <!-- <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'pricing' %}">Purchase Ticket</a></li>-->
+          <!-- <li><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li> -->
+          <li class="buy-tickets"><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li>
           <li class="buy-tickets"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
           {%else%}
           <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>
@@ -176,6 +178,8 @@
 
   <!-- Contact Form JavaScript File -->
   <script src="{% static 'contactform/contactform.js' %}"></script>
+
+  <script src="{% static 'js/toastr.min.js' %}"></script>
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'js/main.js' %}"></script>

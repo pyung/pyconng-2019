@@ -13,14 +13,14 @@
       <form role="form" class="form-horizontal" method="post">
         {% csrf_token %}
         <div class="form-group">
-        {{ form |crispy}}
-        <input type="submit" class="btn btn-md" value="Sign in">
-      </div>
-      <p>Don't have an account? <a href="{% url 'signup' %}" title="Sign Up">Sign Up</a></p>
-        <input type="hidden" name="next" value="{% url 'dashboard' %}" />
+          {{ form |crispy}}
+          <input type="submit" class="btn btn-md" value="Sign in">
+        </div>
+        <p>Don't have an account? <a href="{% url 'signup' %}" title="Sign Up">Sign Up</a></p>
+        <input type="hidden" name="next" value="{% url 'index' %}" />
 
-        
-      </div>
+          
+        </div>
       
       </form>
       </div>

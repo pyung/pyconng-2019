@@ -698,7 +698,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                    {% paystack_button amount=5000 email="pynigeria@gmail.com" %}
                 </div>
               </div>
             </div>
@@ -719,7 +719,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
+                  {% paystack_button amount=5000 email="pynigeria@gmail.com" %}
                 </div>
               </div>
             </div>
@@ -741,7 +741,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                    {% paystack_button amount=15000 email="pynigeria@gmail.com" %}
                 </div>
 
               </div>
