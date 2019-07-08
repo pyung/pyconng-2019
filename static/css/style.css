@@ -4,7 +4,36 @@
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
 */
-
+#django-paystack-button {
+  padding: 15px 65px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  color: #fff;
+  overflow: hidden;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background: green;
+  /* padding: 25px 80px; */
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#django-paystack-button:hover{
+  cursor: pointer;
+  background: none;
+  border: 2px solid green;
+  color: inherit;
+  border-radius: 50px;
+  margin: 15px 30px;
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/

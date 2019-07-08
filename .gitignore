@@ -119,3 +119,5 @@ dmypy.json
 settings.py
 
 .vscode/
+
+mydatabase
