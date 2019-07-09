@@ -7,4 +7,5 @@ urlpatterns = [
     path('dashboard', views.dashboard.as_view(), name='dashboard'),
     path('tickets', views.TicketPricing.as_view(), name='pricing'),
     path('profile', views.profile.as_view(), name='update_profile'),
+    path('sponsorship', views.sponsorship.as_view(), name='donate'),
 ]

@@ -37,6 +37,9 @@ class profile(TemplateView):
 class TicketPricing(TemplateView):
     template_name = 'accounts/tickets.html'
 
+class sponsorship(TemplateView):
+	template_name = 'accounts/sponsorship.html'
+
 
 
 def signup(request):
