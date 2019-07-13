@@ -8,4 +8,5 @@ urlpatterns = [
     path('tickets', views.TicketPricing.as_view(), name='pricing'),
     path('profile', views.profile.as_view(), name='update_profile'),
     path('sponsorship', views.sponsorship.as_view(), name='donate'),
+    path('thank-you', views.thanks.as_view(), name='thanks'),
 ]

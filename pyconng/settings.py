@@ -156,10 +156,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_REDIRECT_URL = 'dashboard'
 
 PAYSTACK_SECRET_KEY = env(
-    "PAYSTACK_SECRET_KEY", default="sk_test_2b26bb3fbdac97bae95b1a52a2b834c5fed50fca"
+    "PAYSTACK_SECRET_KEY", default="sk_live_0e52d664bf9db68e1fa9b740e6f094b637fbba66"
 )
 PAYSTACK_PUBLIC_KEY = env(
-    "PAYSTACK_PUBLIC_KEY", default="pk_test_bf89c9aa71c369665787696149bf8fcfffefc3a6"
+    "PAYSTACK_PUBLIC_KEY", default="pk_live_d933c2f05e75de20df4a814463aeade4aa5a20b9"
 )
 
 PAYSTACK_SUCCESS_URL='dashboard'
