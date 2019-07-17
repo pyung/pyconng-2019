@@ -43,6 +43,15 @@ class sponsorship(TemplateView):
 class thanks(TemplateView):
 	template_name = 'accounts/sponsor-thanks.html'
 
+class ticket_pay_corporate(TemplateView):
+	template_name = 'accounts/ticket_pay_corporate.html'
+
+class ticket_pay_individual(TemplateView):
+	template_name = 'accounts/ticket_pay_individual.html'
+
+class ticket_pay_students(TemplateView):
+	template_name = 'accounts/ticket_pay_students.html'
+
 
 
 def signup(request):

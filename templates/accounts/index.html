@@ -672,7 +672,7 @@
     <!--==========================
       Buy Ticket Section
     ============================-->
-    <!-- {%if request.user.is_authenticated %}
+    {%if request.user.is_authenticated %}
     <section id="buy-tickets" class="section-with-bg wow fadeInUp">
       <div class="container">
 
@@ -698,7 +698,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                    {% paystack_button amount=5000 email="pynigeria@gmail.com" %}
+                  <a href="{% url 'ticket_pay_students' %}">Home</a>
                 </div>
               </div>
             </div>
@@ -719,7 +719,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  {% paystack_button amount=8000 plan="PLN_qmbuy5nczsqgagh" email="pynigeria@gmail.com" %}
+                  <a href="{% url 'ticket_pay_individual' %}">Home</a>
                 </div>
               </div>
             </div>
@@ -741,7 +741,7 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                    {% paystack_button amount=15000 email="pynigeria@gmail.com" %}
+                  <a href="{% url 'ticket_pay_corporate' %}">Home</a>
                 </div>
 
               </div>
@@ -752,7 +752,7 @@
       </div>
       {%endif%}
 
-    </section> -->
+    </section>
 
     <!--==========================
       Contact Section

@@ -9,4 +9,7 @@ urlpatterns = [
     path('profile', views.profile.as_view(), name='update_profile'),
     path('sponsorship', views.sponsorship.as_view(), name='donate'),
     path('thank-you', views.thanks.as_view(), name='thanks'),
+    path('ticket-pay-corp', views.ticket_pay_corporate.as_view(), name='ticket_pay_corporate'),
+    path('ticket-pay-indiv', views.ticket_pay_individual.as_view(), name='ticket_pay_individual'),
+    path('ticket-pay-stud', views.ticket_pay_students.as_view(), name='ticket_pay_students'),
 ]

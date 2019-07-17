@@ -4,6 +4,285 @@
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
 */
+.student-img {
+  background: url('../img/Female-Black-African-Student-Smiling-1.jpg') center right ;
+  background-size: cover;
+  height: 500px;
+}
+.align-items-center {
+  align-items: center!important;
+}
+.trans-04 {
+	-webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.overlay-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  background-color: rgba(6, 12, 34, 0.78);
+  overflow:hidden;
+}
+.user-form-profile h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #333;
+  letter-spacing: 2px;
+}
+.user-form-profile .form-group {
+  display: flex;
+}
+.user-form-profile .form-group .form-wrapper:first-child {
+  margin-right: 20px;
+}
+.user-form-profile .form-group .form-wrapper {
+  width: 50%;
+}
+.user-form-profile .form-wrapper {
+  margin-bottom: 17px;
+}
+.user-form-profile .form-wrapper label {
+  margin-bottom: 9px;
+  display: block;
+}
+.user-form-profile .form-control {
+  border: 1px solid #ccc!important!important;
+  display: block!important;
+  width: 100%!important;
+  height: 40px!important;
+  padding: 0 20px!important;
+  border-radius: 20px!important;
+  font-family: "Muli-Bold";
+  background: none!important
+}
+.user-form-profile button {
+  color: white;
+  background-color: #71ce73;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  /* box-shadow: 0px 3px 0px 0px #66ac64; */
+  letter-spacing: 0.07em;
+  transition: all 0.4s ease;
+}
+.user-form-profile button:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
+  color: #060c22
+}
+.user-form-profile .form-control:focus {
+  border: 1px solid #ae3c33!important
+}
+:focus {
+  outline: none;
+}
+.user-form-profile input, textarea, select, button {
+  color: #333!important;
+  font-size: 13px!important!important;
+}
+.profile-img .avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.thank-you .card {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  max-width: 100%;
+  background: #fff;
+}
+.thank-you .no-pointer:hover + .no-pointer:hover {
+  cursor: default;
+}
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: rgba(6, 12, 34, 0.78);
+  width: 300px;
+  z-index: 1;
+  animation: move 15s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(0.8, 1) translate(70vw, 30vh) rotate(160deg); }
+  40%  { transform: scale(0.8, 1) translate(60vw, 30vh) rotate(160deg); }
+  78%  { transform: scale(1.3) translate(50vw, 50vh) rotate(-20deg); }
+  80%  { transform: scale(1.3) translate(40vw, 50vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(30px, -30px); }
+}
+
+.d-flex {
+  display: flex!important;
+}
+.justify-content-center {
+  justify-content: center!important;
+}
+.home-btn {
+  width: 200px!important;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 10;
+}
+.thank-you h3 {
+  z-index: 10;
+}
+.success-checkmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+}
+.success-checkmark .check-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #4CAF50;
+}
+.success-checkmark .check-icon::before {
+  top: 3px;
+  left: -2px;
+  width: 30px;
+  transform-origin: 100% 50%;
+  border-radius: 100px 0 0 100px;
+}
+.success-checkmark .check-icon::after {
+  top: 0;
+  left: 30px;
+  width: 60px;
+  transform-origin: 0 50%;
+  border-radius: 0 100px 100px 0;
+  animation: rotate-circle 5.25s ease-in;
+}
+.success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+  content: '';
+  height: 100px;
+  position: absolute;
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+}
+.success-checkmark .check-icon .icon-line {
+  height: 5px;
+  background-color: #4CAF50;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+.success-checkmark .check-icon .icon-line.line-tip {
+  top: 46px;
+  left: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.95s;
+}
+.success-checkmark .check-icon .icon-line.line-long {
+  top: 38px;
+  right: 8px;
+  width: 47px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.95s;
+}
+.success-checkmark .check-icon .icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgba(76, 175, 80, 0.5);
+}
+.success-checkmark .check-icon .icon-fix {
+  top: 8px;
+  width: 5px;
+  left: 26px;
+  z-index: -1;
+  height: 85px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: #FFFFFF;
+}
+
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+@keyframes icon-line-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes icon-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+
 #django-paystack-button {
   padding: 15px 65px;
   border-radius: 50px;

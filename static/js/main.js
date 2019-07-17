@@ -1,4 +1,10 @@
 jQuery(document).ready(function( $ ) {
+  /*[ Select 2 Config ]
+        ===========================================================*/
+      $('.js-example-basic-single').select2({
+        placeholder: "Select a State",
+        allowClear: true
+      });
 
   // Back to top button
   $(window).scroll(function() {
