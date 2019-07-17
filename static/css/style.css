@@ -4,6 +4,17 @@
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
 */
+.individual-img {
+  background: url('../img/P.jpeg') center center ;
+  background-size: cover;
+  height: 500px;
+}
+.cooperate-img {
+  background: url('../img/e1838654b2c558aed78ecbb855aaae15.jpg') center center ;
+  background-size: cover;
+  height: 500px;
+  
+}
 .student-img {
   background: url('../img/Female-Black-African-Student-Smiling-1.jpg') center right ;
   background-size: cover;
