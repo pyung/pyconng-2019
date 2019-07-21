@@ -104,16 +104,16 @@ WSGI_APPLICATION = 'pyconng.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
-    }
-}
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': 'mydatabase',
+    #}
+#}
 
-# DATABASES = {
-# }
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES = {
+    }
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
