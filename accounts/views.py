@@ -32,15 +32,12 @@ class index(TemplateView):
 class dashboard(TemplateView):
 	template_name = 'accounts/dashboard.html'
 
-@login_required(login_url='/accounts/login/')
 class profile(TemplateView):
 	template_name = 'accounts/profile.html'
 
 class TicketPricing(TemplateView):
     template_name = 'accounts/tickets.html'
 
-
-@login_required(login_url='/accounts/login/')
 class sponsorship(TemplateView):
 	template_name = 'accounts/sponsorship.html'
 
