@@ -11,34 +11,22 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import dj_database_url
-import dotenv
-import pdb
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-dotenv_file = os.path.join(BASE_DIR, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
 
-def env(variable, default):
-    try:
-        value = os.environ[variable]
-        return value
-    except:
-        return default
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY', '#g^v-%vj*lt05hb3vx#-pd3!9=zd4@%6htr_jo8h(sq#3p+bo+')
+SECRET_KEY = '#g^v-%vj*lt05hb3vx#-pd3!9=zd4@%6htr_jo8h(sq#3p+bo+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://pycon.pythonnigeria.org', 'pycon.pythonnigeria.org', 'pycon-ng.herokuapp.com'] if not DEBUG else ['*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -54,14 +42,14 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     'accounts',
-    'proposals',
+    # 'proposals',
     'tickets',
 ]
 
 THIRD_PARTY_APPS = [
     'crispy_forms',
-    'dj_database_url',
-    'paystack',
+    # 'dj_database_url',
+    # 'paystack',
 ]
 
 
@@ -164,13 +152,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
-PAYSTACK_SECRET_KEY = env(
-    "PAYSTACK_SECRET_KEY", default="sk_test_a551e347b4fc7af40b897f1fc217ce3642d1faa7"
-)
-PAYSTACK_PUBLIC_KEY = env(
-    "PAYSTACK_PUBLIC_KEY", default="pk_test_fbc2f1812af67479da1306edc72890e0702f052e"
-)
+# PAYSTACK_SECRET_KEY = env(
+#     "PAYSTACK_SECRET_KEY", default="sk_test_a551e347b4fc7af40b897f1fc217ce3642d1faa7"
+# )
+# PAYSTACK_PUBLIC_KEY = env(
+#     "PAYSTACK_PUBLIC_KEY", default="pk_test_fbc2f1812af67479da1306edc72890e0702f052e"
+# )
 
-PAYSTACK_SUCCESS_URL='update_profile'
+# PAYSTACK_SUCCESS_URL='update_profile'
 
 
