@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% load paystack %}
+<!-- {% load paystack %} -->
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="margin-top: 60px;">
 	<h1 class="display-4">Tickets Pricing</h1>
@@ -21,7 +21,7 @@
 					<li>This option is for students in Secondary and Tertiary institutions</li>
 					<li>1 person pass</li>
 				</ul>
-				{% paystack_button amount=5000 email="pynigeria@gmail.com" %}
+				<!-- {% paystack_button amount=5000 email="pynigeria@gmail.com" %} -->
 			</div>
 		</div>
 		<div class="card mb-4 box-shadow">
@@ -32,7 +32,7 @@
 				<h1 class="card-title pricing-card-title">&#8358;8,000</h1>
 				<ul class="list-unstyled mt-3 mb-4">
 					<li>One person pass</li>
-				</ul>{% paystack_button amount=8000 email="pynigeria@gmail.com"  %}
+				<!-- </ul>{% paystack_button amount=8000 email="pynigeria@gmail.com"  %} -->
 			</div>
 		</div>
 		<div class="card mb-4 box-shadow">
@@ -44,7 +44,7 @@
 				<ul class="list-unstyled mt-3 mb-4">
 					<li>4 person pass </li>
 				</ul>
-				{% paystack_button amount=15000 email="pynigeria@gmail.com" %}
+				<!-- {% paystack_button amount=15000 email="pynigeria@gmail.com" %} -->
 			</div>
 		</div>
 	</div>

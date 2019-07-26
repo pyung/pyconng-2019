@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from paystack.signals import payment_verified
+
 
 from django.dispatch import receiver
 
@@ -29,12 +29,3 @@ class TicketPurchase(models.Model):
 
 
 
-@receiver(payment_verified)
-def on_payment_verified(sender, ref,amount, **kwargs):
-    """
-    ref: paystack reference sent back.
-    amount: amount in Naira.
-    """
-    print(ref)
-    print(sender)
-    print(amount)
