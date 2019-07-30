@@ -82,7 +82,7 @@
           {%if request.user.is_authenticated %}
           <!-- <li><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li> -->
           <li class="buy-tickets"><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li>
-          <li class="profile"><a href="{% url 'update_profile' %}">Profile</a></li>
+          <!-- <li class="profile"><a href="{% url 'update_profile' %}">Profile</a></li> -->
           <li class="logout"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
           {%else%}
           <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>
