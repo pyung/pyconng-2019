@@ -32,25 +32,30 @@ class index(TemplateView):
 class dashboard(TemplateView):
 	template_name = 'accounts/dashboard.html'
 
+@login_required
 class profile(TemplateView):
 	template_name = 'accounts/profile.html'
 
+@login_required
 class TicketPricing(TemplateView):
     template_name = 'accounts/tickets.html'
-
+@login_required
 class sponsorship(TemplateView):
 	template_name = 'accounts/sponsorship.html'
 
+@login_required
 class thanks(TemplateView):
 	template_name = 'accounts/sponsor-thanks.html'
 
-
+@login_required
 class ticket_pay_corporate(TemplateView):
 	template_name = 'accounts/ticket_pay_corporate.html'
 
+@login_required
 class ticket_pay_individual(TemplateView):
 	template_name = 'accounts/ticket_pay_individual.html'
 
+@login_required
 class ticket_pay_students(TemplateView):
 	template_name = 'accounts/ticket_pay_students.html'
 
