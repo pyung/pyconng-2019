@@ -12,7 +12,6 @@ h2==3.1.0
 hpack==3.0.0
 http3==0.6.4
 idna==2.8
-Paperboy==1.0.1
 python-dateutil==2.8.0
 python-decouple==3.1
 pytz==2019.1
