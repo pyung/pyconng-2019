@@ -114,7 +114,7 @@ dmypy.json
 .sqlite3
 *.pyc
 '.env' 
-
+*.DS_Store
 
 settings.py
 
