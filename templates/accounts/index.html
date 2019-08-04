@@ -424,6 +424,229 @@
 
     </section> -->
 
+    
+    <!--==========================
+      Hotels Section
+    ============================-->
+    <section id="features" class="section-with-bg wow fadeInUp">
+
+      <div class="container-fluid">
+        <div class="section-header">
+          <h2>Event Features</h2>
+          <p>Here are the exiting event features and sessions</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="mx-auto">
+              <h5 class="font-weight-bold text-center">Keynotes</h5>
+              <p class="font-weight-lighter text-center">The keynote session will feature keynote addresses on topical issues around the use of python technology as well building a scalable business/startup from coding.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="mx-auto">
+              <h5 class="font-weight-bold text-center">Tutorials</h5>
+              <p class="font-weight-lighter text-center">The tutorial sessions are design to help aspiring python developers, aspiring data scientists and technology enthusiasts develop their skills and expertise in Python programming.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="mx-auto">
+              <h5 class="font-weight-bold text-center">Hackathon</h5>
+              <p class="font-weight-lighter text-center">The goal of the hackathon is to leverage the simplicity and efficiency of the python programming language to solve a Nigerian-centric problem. </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="mx-auto">
+              <h5 class="font-weight-bold text-center">Specialized talks</h5>
+              <p class="font-weight-lighter text-center">This session will feature various talks on using Python for exploratory &amp; Data Science, Building web apps with Python frameworks, CI/CD (DevOps) </p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+    </section> 
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our images from last year's edition</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+        {% for image in images %}
+        <a href="#" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/{{image}}' %}" alt=""></a>
+        {% endfor %}
+        <a href="{% static 'img/past_event/1.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/1.jpg' %}" alt=""></a>
+        <a href="{% static 'img/past_event/2.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/2.jpg' %}" alt=""></a>
+        <a href="{% static 'img/past_event/3.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/3.jpg' %}" alt=""></a>
+        <a href="{% static 'img/past_event/4.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/4.jpg' %}" alt=""></a>
+        
+      </div>
+
+    </section>
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="supporters" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+
+        <div class="row no-gutters supporters-wrap clearfix">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/stickermule.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://digitalocean.com"><img src="{% static 'img/supporters/digitalocean_logo.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>
+        
+          <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/datamatrix@2x.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>  -->
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.djangoproject.com"><img src="{% static 'img/supporters/django@2x.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>
+          
+          <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/flutterwave@2x.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/github@2x.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/paylater@2x.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div> -->
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <a href="https://www.python.org/"></a><img src="{% static 'img/supporters/psf@2x.png' %}" class="img-fluid" alt=""></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+    <!--==========================
+      Buy Ticket Section
+    ============================-->
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Buy Tickets</h2>
+          <p>list of tickets.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Students</h5>
+                <h6 class="card-price text-center">NGN5000</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <a href="{% url 'ticket_pay_students' %}">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Individual</h5>
+                <h6 class="card-price text-center">NGN8000</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <a href="{% url 'ticket_pay_individual' %}">Know More</a>
+                </div>
+              </div>
+            </div>
+          </div> 
+          
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Corporate</h5>
+                <h6 class="card-price text-center">NGN15000</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <a href="{% url 'ticket_pay_corporate' %}">Know More</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+
+    </section>
     <!--==========================
       Venue Section
     ============================-->
@@ -523,233 +746,6 @@
 
         </div>
       </div>
-
-    </section>
-
-    <!--==========================
-      Hotels Section
-    ============================-->
-    <section id="features" class="section-with-bg wow fadeInUp">
-
-      <div class="container-fluid">
-        <div class="section-header">
-          <h2>Event Features</h2>
-          <p>Here are the exiting event features and sessions</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Keynotes</h5>
-              <p class="font-weight-lighter text-center">The keynote session will feature keynote addresses on topical issues around the use of python technology as well building a scalable business/startup from coding.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Tutorials</h5>
-              <p class="font-weight-lighter text-center">The tutorial sessions are design to help aspiring python developers, aspiring data scientists and technology enthusiasts develop their skills and expertise in Python programming.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Hackathon</h5>
-              <p class="font-weight-lighter text-center">The goal of the hackathon is to leverage the simplicity and efficiency of the python programming language to solve a Nigerian-centric problem. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Specialized talks</h5>
-              <p class="font-weight-lighter text-center">This session will feature various talks on using Python for exploratory &amp; Data Science, Building web apps with Python frameworks, CI/CD (DevOps) </p>
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-
-    </section> 
-
-    <!--==========================
-      Gallery Section
-    ============================-->
-    <section id="gallery" class="wow fadeInUp">
-
-      <div class="container">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our images from last year's edition</p>
-        </div>
-      </div>
-
-      <div class="owl-carousel gallery-carousel">
-        {% for image in images %}
-        <a href="#" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/{{image}}' %}" alt=""></a>
-        {% endfor %}
-        <a href="{% static 'img/past_event/1.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/1.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/2.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/2.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/3.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/3.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/4.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/4.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/5.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/5.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/6.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/6.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/7.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/7.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/8.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/8.jpg' %}" alt=""></a>
-      </div>
-
-    </section>
-
-    <!--==========================
-      Sponsors Section
-    ============================-->
-    <section id="supporters" class="section-with-bg wow fadeInUp">
-
-      <div class="container">
-        <div class="section-header">
-          <h2>Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/stickermule.png' %}" class="img-fluid" alt=""></a>
-            </div>
-          </div>
-          <!--
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/cowrywise@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-        
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/datamatrix@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div> -->
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/django@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/flutterwave@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-        
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/github@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/paylater@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div> -->
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/psf@2x.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    
-    <!--==========================
-      Buy Ticket Section
-    ============================-->
-    {%if request.user.is_authenticated %}
-    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Buy Tickets</h2>
-          <p>list of tickets.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Students</h5>
-                <h6 class="card-price text-center">NGN5000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="{% url 'ticket_pay_students' %}">Know More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Individual</h5>
-                <h6 class="card-price text-center">NGN8000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="{% url 'ticket_pay_individual' %}">Know More</a>
-                </div>
-              </div>
-            </div>
-          </div> 
-          
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Corporate</h5>
-                <h6 class="card-price text-center">NGN15000</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <a href="{% url 'ticket_pay_corporate' %}">Know More</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      {%endif%}
 
     </section>
 
