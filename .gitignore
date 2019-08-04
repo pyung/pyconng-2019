@@ -113,10 +113,9 @@ dmypy.json
 .pyre/
 .sqlite3
 *.pyc
-'.env' 
+.env
+.env.db
 *.DS_Store
-
-settings.py
 
 .vscode/
 
