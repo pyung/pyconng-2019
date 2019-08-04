@@ -1,0 +1,191 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pycon</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/venobox/venobox.css' %}" rel="stylesheet">
+  <link href=" {% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/select/select2.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  {% block header %}
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="{%url 'index'%}" class="scrollto"><img src="{% static 'img/logo-light.png' %}" alt="" title=""></a>
+        <a href="{%if request.user.is_authenticated %}{%url 'dashboard' %}{%else%}{%url 'index' %}{%endif%}" class="scrollto"></a>
+
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            {%if request.user.is_authenticated %}
+        
+            <font color="green" size="2"><li><b>Hello {{request.user}}!</b></li></font>
+        {%endif%}
+          {% if request.get_full_path == "/" %}
+
+
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="{%url 'index'%}#about">About</a></li>
+          <!-- <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#supporters">Sponsors</a></li> -->
+          <li><a href="{%url 'index'%}#contact">Contact</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+    
+          <li><a href="{% url 'donate' %}">Sponsorship</a></li>
+          {%endif%}
+
+          {%if request.user.is_authenticated %}
+          <!-- <li><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li> -->
+          <li class="buy-tickets"><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li>
+          <!-- <li class="profile"><a href="{% url 'update_profile' %}">Profile</a></li> -->
+          <li class="logout"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
+          {%else%}
+          <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>
+          {%endif%}
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  {% endblock header%}
+
+  
+
+    
+
+      <!-- Modal Order Form -->
+      <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Buy Tickets</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                  <select id="ticket-type" name="ticket-type" class="form-control" >
+                    <option value="">-- Select Your Ticket Type --</option>
+                    <option value="standard-access">Standard Access</option>
+                    <option value="pro-access">Pro Access</option>
+                    <option value="premium-access">Premium Access</option>
+                  </select>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn">Buy Now</button>
+                </div>
+              </form>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+</section>
+<main id='main'>
+<div class="vertical-center">
+{% block content %}
+
+{% endblock content %}
+</div>
+</main>
+  
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="mt-5">
+    
+
+    <div class="container">
+      <div class="copyright">
+        Built by Awesome folks at PythonNigeria Community
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Template by <a href="bootstrapmade.com">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+{% block js%}
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+  <script src="{% static 'lib/select/select.min.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock js %}
+</body>
+
+</html>
