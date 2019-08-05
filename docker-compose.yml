@@ -6,8 +6,8 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./web/:/usr/src/web/
-    ports:
-      - 8000:8000
+    expose:
+      - 8000
     environment:
       - DEBUG=1
       - SECRET_KEY=devk33s
@@ -32,5 +32,15 @@ services:
       - POSTGRES_PASSWORD=pyconng
       - POSTGRES_DB=pyconng_dev
 
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/usr/src/web/staticfiles
+    ports:
+      - 80:80
+    depends_on: 
+      - web
+
 volumes:
   postgres_data:
+  static_volume:
