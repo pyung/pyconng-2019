@@ -116,8 +116,6 @@ dmypy.json
 '.env' 
 *.DS_Store
 
-settings.py
-
 .vscode/
 
 mydatabase
