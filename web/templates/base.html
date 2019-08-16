@@ -62,7 +62,7 @@
         
             <font color="green" size="2"><li><b>Hello {{request.user}}!</b></li></font>
         {%endif%}
-          {% if request.get_full_path == "/" %}
+          
 
 
           <li class="menu-active"><a href="#intro">Home</a></li>
@@ -77,13 +77,14 @@
           <!-- <li><a href="#contact">Contact</a></li> -->
           <li><a href="{% url 'donate' %}">Sponsorship</a></li>
           <li class="buy-tickets"><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li>
-          {%endif%}
+          
 
           {%if request.user.is_authenticated %}
           <!-- <li><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li> -->
           
           <li class="logout"><a href="{% url 'logout' %}?next={% url 'index' %}">Sign Out</a></li>
           {%else%}
+          
           <li class="buy-tickets"><a href="{% url 'login' %}?next={% url 'index' %}">Login/Sign Up</a></li>
           {%endif%}
         </ul>
