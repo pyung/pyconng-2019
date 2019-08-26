@@ -2,68 +2,75 @@
 
 
 
-  {% block content %}
+{% block content %}
 
-  <!--==========================
+<!--==========================
     Intro Section
   ============================-->
-  
-  <section id="intro">
-    <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">The Annual<br><span>Python Nigeria</span> Conference</h1>
-      <p class="mb-4 pb-0">25th - 28th September, 2019, Wennovation Hub, 50 Ebitu Ukiwe Street. Jabi, Abuja, Nigeria</p>
-      <a href="https://www.youtube.com/watch?v=fW0tGgo3yVk" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
-      <a href="https://www.papercall.io/pyconng2019" class="about-btn scrollto">Submit Talk</a>
+
+<section id="intro">
+  <div class="intro-container wow fadeIn">
+    <h1 class="mb-4 pb-0">The Annual<br><span>Python Nigeria</span> Conference</h1>
+    <p class="mb-4 pb-0">25th - 28th September, 2019, Wennovation Hub, 50 Ebitu Ukiwe Street. Jabi, Abuja, Nigeria</p>
+    <a href="https://www.youtube.com/watch?v=fW0tGgo3yVk" class="venobox play-btn mb-4" data-vbtype="video"
+      data-autoplay="true"></a>
+    <a href="{% url 'index' %}#buy-tickets" class="about-btn scrollto">Purchase Ticket</a>
+  </div>
+</section>
+
+<main id="main">
+
+  <!--==========================
+      About Section
+    ============================-->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>About The Event</h2>
+          <p class="aboutheight">The PyConNG 2019 is the largest annual gathering of Python technology users including
+            developers,
+            data scientists/analysts, business intelligence experts, representative of organizations
+            and everyone interested in technology. It is organised by members of the Python Users Nigeria Group,
+            a nonprofit organization dedicated to advancing the use of Python technology in Nigeria through her
+            community initiatives.
+          </p>
+          <div class="collapse" id="moreAbout">
+            <p class="aboutheight">
+              Participants come together to network, collaborate and learn via the various high impact sessions. PyconNG
+              2019 will feature tutorial sessions, hackathon, sprint, keynote addresses, and various talk sessions in
+              data science, Web/Devops, and general talks.
+            </p>
+            <p class="aboutheight">
+              The PyConNG 2019 will mark the 3rd edition of the annual pycon conference with the last two conferences
+              which was held in Lagos, hosting over 300 participants from Africa, America and different states in
+              Nigeria. The 2019 Pycon Nigeria conference promises to be bigger and better.
+            </p>
+            <p class="aboutheight">
+              The PyConNG 2019 conference will also provide a platform for companies/organizations to exhibit their
+              product and service offerings.
+              We look forward to host you in Nigeria’s federal capital territory for the 2019 PyconNG conference!
+            </p>
+          </div>
+          <a class="link text-white" id='moreLess' data-toggle="collapse" href="#moreAbout" role="button"
+            aria-expanded="false" aria-controls="moreAbout">More</a>
+        </div>
+        <div class="col-lg-3">
+          <h3>Where</h3>
+          <p>Wennovation Hub, 50 Ebitu Ukiwe Street. Jabi, Abuja, Nigeria</p>
+        </div>
+        <div class="col-lg-3">
+          <h3>When</h3>
+          <p>Wednesday 25th to Saturday 28th, <br>September 2019</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>About The Event</h2>
-            <p class="aboutheight">The PyConNG 2019 is the largest annual gathering of Python technology users including developers, 
-              data scientists/analysts, business intelligence experts, representative of organizations 
-              and everyone interested in technology. It is organised by members of the Python Users Nigeria Group, 
-              a nonprofit organization dedicated to advancing the use of Python technology in Nigeria through her 
-              community initiatives. 
-            </p>
-            <div class="collapse" id="moreAbout">
-              <p class="aboutheight">
-                Participants come together to network, collaborate and learn via the various high impact sessions. PyconNG 2019 will feature tutorial sessions, hackathon, sprint, keynote addresses, and various talk sessions in data science, Web/Devops, and general talks.
-              </p>
-              <p class="aboutheight">
-                The PyConNG 2019 will mark the 3rd edition of the annual pycon conference with the last two conferences which was held in Lagos, hosting over 300 participants from Africa, America and different states in Nigeria. The 2019 Pycon Nigeria conference promises to be bigger and better.
-              </p>
-              <p class="aboutheight">
-                The PyConNG 2019 conference will also provide a platform for companies/organizations to exhibit their product and service offerings.
-                We look forward to host you in Nigeria’s federal capital territory for the 2019 PyconNG conference!
-              </p>
-            </div>
-            <a class="link text-white" id='moreLess'  data-toggle="collapse" href="#moreAbout" role="button" aria-expanded="false" aria-controls="moreAbout">More</a>
-          </div>
-          <div class="col-lg-3">
-            <h3>Where</h3>
-            <p>Wennovation Hub, 50 Ebitu Ukiwe Street. Jabi, Abuja, Nigeria</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>When</h3>
-            <p>Wednesday 25th to Saturday 28th, <br>September 2019</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--==========================
+  <!--==========================
       Speakers Section
     ============================-->
-    <!-- <section id="speakers" class="wow fadeInUp">
+  <!-- <section id="speakers" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>Who will be speaking?</h2>
@@ -166,10 +173,10 @@
 
     </section> -->
 
-    <!--==========================
+  <!--==========================
       Schedule Section
     ============================-->
-    <!-- <section id="schedule" class="section-with-bg">
+  <!-- <section id="schedule" class="section-with-bg">
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>what am i going to learn?</h2>
@@ -194,8 +201,8 @@
 
         <div class="tab-content row justify-content-center"> -->
 
-          <!-- Schdule Day 1 -->
-          <!-- <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+  <!-- Schdule Day 1 -->
+  <!-- <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>09:30 AM</time></div>
@@ -272,10 +279,10 @@
             </div>
 
           </div> -->
-          <!-- End Schdule Day 1 -->
+  <!-- End Schdule Day 1 -->
 
-          <!-- Schdule Day 2 -->
-          <!-- <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+  <!-- Schdule Day 2 -->
+  <!-- <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>10:00 AM</time></div>
@@ -344,10 +351,10 @@
             </div>
 
           </div> -->
-          <!-- End Schdule Day 2 -->
+  <!-- End Schdule Day 2 -->
 
-          <!-- Schdule Day 3 -->
-          <!-- <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+  <!-- Schdule Day 3 -->
+  <!-- <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>10:00 AM</time></div>
@@ -416,124 +423,137 @@
             </div>
 
           </div>  -->
-          <!-- End Schdule Day 2 -->
+  <!-- End Schdule Day 2 -->
 
-        <!-- </div>
+  <!-- </div>
 
       </div>
 
     </section> -->
 
-    
-    <!--==========================
+
+  <!--==========================
       Hotels Section
     ============================-->
-    <section id="features" class="section-with-bg wow fadeInUp">
+  <section id="features" class="section-with-bg wow fadeInUp">
 
-      <div class="container-fluid">
-        <div class="section-header">
-          <h2>Event Features</h2>
-          <p>Here are the exiting event features and sessions</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Keynotes</h5>
-              <p class="font-weight-lighter text-center">The keynote session will feature keynote addresses on topical issues around the use of python technology as well building a scalable business/startup from coding.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Tutorials</h5>
-              <p class="font-weight-lighter text-center">The tutorial sessions are design to help aspiring python developers, aspiring data scientists and technology enthusiasts develop their skills and expertise in Python programming.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Hackathon</h5>
-              <p class="font-weight-lighter text-center">The goal of the hackathon is to leverage the simplicity and efficiency of the python programming language to solve a Nigerian-centric problem. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Specialized talks</h5>
-              <p class="font-weight-lighter text-center">This session will feature various talks on using Python for exploratory &amp; Data Science, Building web apps with Python frameworks, CI/CD (DevOps) </p>
-            </div>
-          </div>
-
-          
-        </div>
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2>Event Features</h2>
+        <p>Here are the exiting event features and sessions</p>
       </div>
 
-    </section> 
+      <div class="row">
 
-    <!--==========================
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Keynotes</h5>
+            <p class="font-weight-lighter text-center">The keynote session will feature keynote addresses on topical
+              issues around the use of python technology as well building a scalable business/startup from coding.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Tutorials</h5>
+            <p class="font-weight-lighter text-center">The tutorial sessions are design to help aspiring python
+              developers, aspiring data scientists and technology enthusiasts develop their skills and expertise in
+              Python programming.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Hackathon</h5>
+            <p class="font-weight-lighter text-center">The goal of the hackathon is to leverage the simplicity and
+              efficiency of the python programming language to solve a Nigerian-centric problem. </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Specialized talks</h5>
+            <p class="font-weight-lighter text-center">This session will feature various talks on using Python for
+              exploratory &amp; Data Science, Building web apps with Python frameworks, CI/CD (DevOps) </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--==========================
       Gallery Section
     ============================-->
-    <section id="gallery" class="wow fadeInUp">
+  <section id="gallery" class="wow fadeInUp">
 
-      <div class="container">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our images from last year's edition</p>
-        </div>
+    <div class="container">
+      <div class="section-header">
+        <h2>Gallery</h2>
+        <p>Check our images from last year's edition</p>
       </div>
+    </div>
 
-      <div class="owl-carousel gallery-carousel">
-        {% for image in images %}
-        <a href="#" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/{{image}}' %}" alt=""></a>
-        {% endfor %}
-        <a href="{% static 'img/past_event/1.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/1.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/2.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/2.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/3.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/3.jpg' %}" alt=""></a>
-        <a href="{% static 'img/past_event/4.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/4.jpg' %}" alt=""></a>
-        
-      </div>
+    <div class="owl-carousel gallery-carousel">
+      {% for image in images %}
+      <a href="#" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/past_event/{{image}}' %}"
+          alt=""></a>
+      {% endfor %}
+      <a href="{% static 'img/past_event/1.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
+          src="{% static 'img/past_event/1.jpg' %}" alt=""></a>
+      <a href="{% static 'img/past_event/2.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
+          src="{% static 'img/past_event/2.jpg' %}" alt=""></a>
+      <a href="{% static 'img/past_event/3.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
+          src="{% static 'img/past_event/3.jpg' %}" alt=""></a>
+      <a href="{% static 'img/past_event/4.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
+          src="{% static 'img/past_event/4.jpg' %}" alt=""></a>
 
-    </section>
+    </div>
 
-    <!--==========================
+  </section>
+
+  <!--==========================
       Sponsors Section
     ============================-->
-    <section id="supporters" class="section-with-bg wow fadeInUp">
+  <section id="supporters" class="section-with-bg wow fadeInUp">
 
-      <div class="container">
-        <div class="section-header">
-          <h2>Sponsors</h2>
+    <div class="container">
+      <div class="section-header">
+        <h2>Sponsors</h2>
+      </div>
+
+      <div class="row no-gutters supporters-wrap clearfix">
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.stickermule.com/supports/pyconnigeria19"><img
+                src="{% static 'img/supporters/stickermule.png' %}" class="img-fluid" alt=""></a>
+          </div>
         </div>
 
-        <div class="row no-gutters supporters-wrap clearfix">
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://digitalocean.com"><img src="{% static 'img/supporters/digitalocean_logo.png' %}"
+                class="img-fluid" alt=""></a>
+          </div>
+        </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/stickermule.png' %}" class="img-fluid" alt=""></a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://digitalocean.com"><img src="{% static 'img/supporters/digitalocean_logo.png' %}" class="img-fluid" alt=""></a>
-            </div>
-          </div>
-        
-          <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+        <!-- <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
               <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/datamatrix@2x.png' %}" class="img-fluid" alt=""></a>
             </div>
           </div>  -->
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.djangoproject.com"><img src="{% static 'img/supporters/django@2x.png' %}" class="img-fluid" alt=""></a>
-            </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.djangoproject.com"><img src="{% static 'img/supporters/django@2x.png' %}"
+                class="img-fluid" alt=""></a>
           </div>
-          
-          <!-- <div class="col-lg-3 col-md-4 col-xs-6">
+        </div>
+
+        <!-- <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
               <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/flutterwave@2x.png' %}" class="img-fluid" alt=""></a>
             </div>
@@ -550,270 +570,286 @@
               <a href="https://www.stickermule.com/supports/pyconnigeria19"><img src="{% static 'img/supporters/paylater@2x.png' %}" class="img-fluid" alt=""></a>
             </div>
           </div> -->
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <a href="https://www.python.org/"><img src="{% static 'img/supporters/psf@2x.png' %}" class="img-fluid" alt=""></a>
-            </div>
-          </div>
 
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <a href="https://www.python.org/"><img src="{% static 'img/supporters/psf@2x.png' %}" class="img-fluid"
+                alt=""></a>
+          </div>
         </div>
 
       </div>
 
-    </section>
+    </div>
 
-    
-    <!--==========================
+  </section>
+
+
+  <!--==========================
       Buy Ticket Section
     ============================-->
-    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
-      <div class="container">
+  <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+    <div class="container">
 
-        <div class="section-header">
-          <h2>Buy Tickets</h2>
-          <p>list of tickets.</p>
-          <p>What every ticket comes with:</p>
+      <div class="section-header">
+        <h2>Buy Tickets</h2>
+        <p>list of tickets.</p>
+        <p>What every ticket comes with:</p>
 
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Access to tutorial & Main conference</h5>
+            <p class="font-weight-lighter text-center">Admission to the conference on tutorial, main conference, sprint
+              and hackathon days.</p>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Access to tutorial & Main conference</h5>
-              <p class="font-weight-lighter text-center">Admission to the conference on tutorial, main conference, sprint and hackathon days.</p>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Educative Talks, Keynotes & Panel session</h5>
+            <p class="font-weight-lighter text-center">Access to more than 30 talks, educative keynotes, interesting and
+              engaging panel sessions, and also if you got a great idea you needed somebody to work with you on? Do you
+              seek a career advice or growth? This is the opportunity to connect with experts and like minds in the tech
+              space.</p>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Educative Talks, Keynotes & Panel session</h5>
-              <p class="font-weight-lighter text-center">Access to more than 30 talks, educative keynotes, interesting and engaging panel sessions, and also if you got a great idea you needed somebody to work with you on? Do you seek a career advice or growth? This is the opportunity to connect with experts and like minds in the tech space.</p>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="mx-auto">
+            <h5 class="font-weight-bold text-center">Free Internet WIFI:</h5>
+            <p class="font-weight-lighter text-center">Access to unlimited and free internet WIFI connectivity all the
+              days. Just bring your device (Laptop, Phone, Tablets) and get connected.</p>
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="mx-auto">
-              <h5 class="font-weight-bold text-center">Free Internet WIFI:</h5>
-              <p class="font-weight-lighter text-center">Access to unlimited and free internet WIFI connectivity all the days. Just bring your device (Laptop, Phone, Tablets) and get connected.</p>
-            </div>
-          </div>
-        
         <div class="col-lg-3 col-md-6">
           <div class="mx-auto">
             <h5 class="font-weight-bold text-center">Swags:</h5>
-            <p class="font-weight-lighter text-center">Every registered conference attendee will receive official conference T-shirt (We have everyone's size), stickers, writing pads, pens and other souvenirs offered by our sponsors.</p>
+            <p class="font-weight-lighter text-center">Every registered conference attendee will receive official
+              conference T-shirt (We have everyone's size), stickers, writing pads, pens and other souvenirs offered by
+              our sponsors.</p>
           </div>
         </div>
       </div>
-        <h5>NB: The price of conference tickets does NOT include hotel accommodations or pass to social events such as tours or dinners.</h5>
-        <hr>
-        
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Students</h5>
-                <h6 class="card-price text-center">NGN5000</h6>
-                <hr>
-                This is for students and postdoctoral researchers currently studying in a recognized 
-                institution. Please note that students will be required to present a valid student 
-                ID card or declaration from University, stating your affiliation, starting and end dates.
+      <h5>NB: The price of conference tickets does NOT include hotel accommodations or pass to social events such as
+        tours or dinners.</h5>
+      <hr>
 
-                <hr>
-                <div class="text-center">
-                  <a href="{% url 'ticket_pay_students' %}">Know More</a>
-                </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Students</h5>
+              <h6 class="card-price text-center">NGN5000</h6>
+              <hr>
+              This is for students and postdoctoral researchers currently studying in a recognized
+              institution. Please note that students will be required to present a valid student
+              ID card or declaration from University, stating your affiliation, starting and end dates.
+
+              <hr>
+              <div class="text-center">
+                <a href="{% url 'ticket_pay_students' %}">Know More</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Individual</h5>
-                <h6 class="card-price text-center">NGN8000</h6>
-                <hr>
-                This is for people using Python from home or as freelancers. 
-                This if for you if you are paying from your own funds.
+        </div>
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Individual</h5>
+              <h6 class="card-price text-center">NGN8000</h6>
+              <hr>
+              This is for people using Python from home or as freelancers.
+              This if for you if you are paying from your own funds.
 
-                <hr>
-                <div class="text-center">
-                  <a href="{% url 'ticket_pay_individual' %}">Know More</a>
-                </div>
-              </div>
-            </div>
-          </div> 
-          
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Corporate</h5>
-                <h6 class="card-price text-center">NGN15000</h6>
-                <hr>
-                This ticket is for people using Python extensively for business or enerprise solutions. 
-                Employers pay for this ticket for their staff.
-
-                <hr>
-                <div class="text-center">
-                  <a href="{% url 'ticket_pay_corporate' %}">Know More</a>
-                </div>
-
+              <hr>
+              <div class="text-center">
+                <a href="{% url 'ticket_pay_individual' %}">Know More</a>
               </div>
             </div>
           </div>
         </div>
 
-      </div>
-      
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Corporate</h5>
+              <h6 class="card-price text-center">NGN15000</h6>
+              <hr>
+              This ticket is for people using Python extensively for business or enerprise solutions.
+              Employers pay for this ticket for their staff.
 
-    </section>
-    <!--==========================
+              <hr>
+              <div class="text-center">
+                <a href="{% url 'ticket_pay_corporate' %}">Know More</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+  <!--==========================
       Venue Section
     ============================-->
-    <section id="venue" class="wow fadeInUp">
+  <section id="venue" class="wow fadeInUp">
 
-      <div class="container-fluid">
+    <div class="container-fluid">
 
-        <div class="section-header">
-          <h2>Event Venue</h2>
-          <p>Event venue location info and gallery</p>
+      <div class="section-header">
+        <h2>Event Venue</h2>
+        <p>Event venue location info and gallery</p>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-lg-6 venue-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.973245137716!2d7.429488314160824!3d9.066201690903007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e75d1da9fcf6d%3A0x82aeaf6de3a8449e!2sWennovation+Hub!5e0!3m2!1sen!2sng!4v1565473018030!5m2!1sen!2sng"
+            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
-        <div class="row no-gutters">
-          <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.973245137716!2d7.429488314160824!3d9.066201690903007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e75d1da9fcf6d%3A0x82aeaf6de3a8449e!2sWennovation+Hub!5e0!3m2!1sen!2sng!4v1565473018030!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3>Wennovation Hub, Ebitu Ukiwe Street, Abuja, Nigeria</h3>
-                <p>World Class Centre for Training, Workshop, Events, and Conferences!
-                To enable you achieve excellence, we have created ergonomic training venues with futuristic technology and resources that enhance human potential to its fullest.</p>
-              </div>
+        <div class="col-lg-6 venue-info">
+          <div class="row justify-content-center">
+            <div class="col-11 col-lg-8">
+              <h3>Wennovation Hub, Ebitu Ukiwe Street, Abuja, Nigeria</h3>
+              <p>World Class Centre for Training, Workshop, Events, and Conferences!
+                To enable you achieve excellence, we have created ergonomic training venues with futuristic technology
+                and resources that enhance human potential to its fullest.</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid venue-gallery-container">
+      <div class="row no-gutters">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="{% static 'img/venue-gallery/1.jpg' %}" class="venobox" data-gall="venue-gallery">
+              <img src="{% static 'img/venue-gallery/1.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="{% static 'img/venue-gallery/2.jpg' %}" class="venobox" data-gall="venue-gallery">
+              <img src="{% static 'img/venue-gallery/2.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="{% static 'img/venue-gallery/3.jpg' %}" class="venobox" data-gall="venue-gallery">
+              <img src="{% static 'img/venue-gallery/3.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="{% static 'img/venue-gallery/4.jpg' %}" class="venobox" data-gall="venue-gallery">
+              <img src="{% static 'img/venue-gallery/4.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="img/venue-gallery/5.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="img/venue-gallery/5.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="img/venue-gallery/6.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="img/venue-gallery/6.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="img/venue-gallery/7.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="img/venue-gallery/7.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="img/venue-gallery/8.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="img/venue-gallery/8.jpg" alt="" class="img-fluid">
+            </a>
           </div>
         </div>
 
       </div>
+    </div>
 
-      <div class="container-fluid venue-gallery-container">
-        <div class="row no-gutters">
+  </section>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="{% static 'img/venue-gallery/1.jpg' %}" class="venobox" data-gall="venue-gallery">
-                <img src="{% static 'img/venue-gallery/1.jpg' %}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="{% static 'img/venue-gallery/2.jpg' %}" class="venobox" data-gall="venue-gallery">
-                <img src="{% static 'img/venue-gallery/2.jpg' %}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="{% static 'img/venue-gallery/3.jpg' %}" class="venobox" data-gall="venue-gallery">
-                <img src="{% static 'img/venue-gallery/3.jpg' %}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="{% static 'img/venue-gallery/4.jpg' %}" class="venobox" data-gall="venue-gallery">
-                <img src="{% static 'img/venue-gallery/4.jpg' %}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="img/venue-gallery/5.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="img/venue-gallery/6.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="img/venue-gallery/7.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="img/venue-gallery/8.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-    <!--==========================
+  <!--==========================
       Contact Section
     ============================-->
-    <section id="contact" class="section-bg wow fadeInUp">
+  <section id="contact" class="section-bg wow fadeInUp">
 
-      <div class="container">
+    <div class="container">
 
-        <div class="section-header">
-          <h2>Contact Us</h2>
-          <p></p>
-        </div>
-
-        
-
-        <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
-
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p></p>
       </div>
-    </section><!-- #contact -->
 
-  </main>
-  {% endblock content %}
+
+
+      <div class="form">
+        <div id="sendmessage">Your message has been sent. Thank you!</div>
+        <div id="errormessage"></div>
+        <form action="" method="post" role="form" class="contactForm">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+              data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+            <div class="validation"></div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" data-rule="required"
+              data-msg="Please write something for us" placeholder="Message"></textarea>
+            <div class="validation"></div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+      </div>
+
+    </div>
+  </section><!-- #contact -->
+
+</main>
+{% endblock content %}
 </body>
 
 </html>
