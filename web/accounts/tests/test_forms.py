@@ -1,5 +1,6 @@
 from django.test import TestCase
 from accounts.forms import SignUpForm
+from accounts.models import Profile
 
 
 class SignUpFormTest(TestCase):
@@ -7,6 +8,8 @@ class SignUpFormTest(TestCase):
     Unit Test For The Sign Up Form
     To Run The Test :  python manage.py test accounts.tests.test_forms
     '''
+
+    # Testing Form Label
     def test_bio_label(self):
         form = SignUpForm()
         self.assertTrue(form.fields['bio'].label == None or form.fields['bio'] == 'bio')
@@ -47,3 +50,58 @@ class SignUpFormTest(TestCase):
     def test_password2_label(self):
         form = SignUpForm()
         self.assertTrue(form.fields['password2'].label,'Password confirmation')
+
+
+    # Testing Form Help Text
+    def test_bio_help_text(self):
+        form = SignUpForm()
+        self.assertEquals(form.fields['bio'].help_text,"Let us know a bit more about you")
+
+    def test_tagline_help_text(self):
+        form = SignUpForm()
+        self.assertEquals(form.fields['tagline'].help_text,"A catch phrase of you")
+    
+    # Testing Form Choices
+
+    def test_gender_choices(self):
+        form = SignUpForm()
+        self.assertEquals(tuple(form.fields['gender'].choices),Profile.GENDER)
+
+    def test_occupation_choices(self):
+        form = SignUpForm()
+        self.assertEquals(tuple(form.fields['occupation'].choices),Profile.OCCUPATION)
+
+
+    # Valid/Invalid
+    def test_valid_form_data(self):
+        form =SignUpForm()
+        data= {
+            'bio':'A Passionate Developer',
+            'tagline':'Great Guy',
+            'gender':'M',
+            'occupation':'P',
+            'first_name':'testuserfirstname',
+            'last_name':'testuserlastname',
+            'username':'testusername',
+            'password1':'testuserpassword',
+            'password2':'testuserpassword',
+            'email':'testuser@gmail.com'
+        }
+        form = SignUpForm(data=data)
+        self.assertTrue(form.is_valid())
+    def test_invalid_form_data(self):
+        form =SignUpForm()
+        data= {
+            'bio':'A Passionate Developer',
+            'tagline':'Great Guy',
+            'gender':'M',
+            'occupation':'P',
+            'first_name':'testuserfirstname',
+            'last_name':'testuserlastname',
+            'username':'',
+            'password1':'testuserpassword',
+            'password2':'testuserpassword',
+            'email':'testuser@gmail.com'
+        }
+        form = SignUpForm(data=data)
+        self.assertFalse(form.is_valid())
