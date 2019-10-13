@@ -69,14 +69,58 @@ class SponsorshipViewTest(TestCase):
 
 
 class ThanksViewTest(TestCase):
-    pass
+    def test_thanks_page_view_by_status_code(self):
+        response = self.client.get('/thank-you')
+        self.assertEquals(response.status_code, 200)
+
+    def test_sponsorship_page_view_by_name(self):
+        response= self.client.get(reverse('thanks'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_index_page_view_template(self):
+        response= self.client.get(reverse('thanks'))
+        self.assertTemplateUsed(response, "accounts/sponsor-thanks.html")
+
 
 
 class TicketPayCorporateViewTest(TestCase):
-    pass
+    def test_ticket_pay_corp_page_view_by_status_code(self):
+        response = self.client.get('/ticket-pay-corp')
+        self.assertEquals(response.status_code, 200)
+
+    def test_ticket_pay_corp_page_view_by_name(self):
+        response= self.client.get(reverse('ticket_pay_corporate'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_ticket_pay_corp_page_view_template(self):
+        response= self.client.get(reverse('ticket_pay_corporate'))
+        self.assertTemplateUsed(response, "accounts/ticket_pay_corporate.html")
+
 
 class TicketPayIndividualViewTest(TestCase):
-    pass
+    def test_ticket_pay_indeividual_page_view_by_status_code(self):
+        response = self.client.get('/ticket-pay-indiv')
+        self.assertEquals(response.status_code, 200)
+
+    def test_ticket_pay_indeividual_page_view_by_name(self):
+        response= self.client.get(reverse('ticket_pay_individual'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_ticket_pay_indeividual_page_view_template(self):
+        response= self.client.get(reverse('ticket_pay_individual'))
+        self.assertTemplateUsed(response, "accounts/ticket_pay_individual.html")
+
 
 class TicketPayStudentsViewTest(TestCase):
-    pass
+
+    def test_ticket_pay_student_page_view_by_status_code(self):
+        response = self.client.get('/ticket-pay-stud')
+        self.assertEquals(response.status_code, 200)
+
+    def test_ticket_pay_student_page_view_by_name(self):
+        response= self.client.get(reverse('ticket_pay_students'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_ticket_pay_student_page_view_template(self):
+        response= self.client.get(reverse('ticket_pay_students'))
+        self.assertTemplateUsed(response, "accounts/ticket_pay_students.html")
