@@ -18,6 +18,9 @@ class Profile(models.Model):
     tagline = models.CharField(max_length=35, null=True, blank=True)
     gender = models.CharField(max_length=1, choices=GENDER)
 
+    def __str__(self):
+        return f'{self.user} profile'
+
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
     if created:
