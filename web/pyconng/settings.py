@@ -28,7 +28,7 @@ DEBUG = int(os.environ.get('DEBUG', default=0)) # False
 
 # DEBUG = True
 
-ALLOWED_HOSTS = ['*','localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
