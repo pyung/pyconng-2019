@@ -12,4 +12,5 @@ urlpatterns = [
     path('ticket-pay-corp', views.ticket_pay_corporate.as_view(), name='ticket_pay_corporate'),
     path('ticket-pay-indiv', views.ticket_pay_individual.as_view(), name='ticket_pay_individual'),
     path('ticket-pay-stud', views.ticket_pay_students.as_view(), name='ticket_pay_students'),
+    path('speaker', views.speaker.as_view(),name="speaker")
 ]
