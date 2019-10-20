@@ -1,0 +1,962 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+    <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our KeyNote Speakers</h2>
+            <p>Our stellar speaker lineup includes expert in python development, tech team leadership and product development.</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <div class="speaker">
+                <img src="{% static 'img/pycon_speakers/Shehu-Awwal-Pass[prt.fw - Shehu Awwal.png' %}" alt="Speaker 3" class="img-fluid">
+                <div class="details">
+                  <h3><a href="#">Shehu Awwal</a></h3>
+                  <p>
+                      Hacker — Passionate About InfoSec, Linux, Clouds,
+                      <span id="dots">...</span> 
+                       <span id="more_1" style="display: none;">
+                          Containers, Virtualization, Distributed Systems And Architectures 
+                       And New Trends.
+                       </span>
+                       <br>
+                  <button onclick="myFunction('more_1')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+
+                                      
+                  </p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="speaker">
+                <img src="{% static 'img/pycon_speakers/jeannette-1_-_Bearly_Articulating.jpg' %}" alt="Speaker 2" class="img-fluid">
+                <div class="details">
+                  <h3><a href="#">Jeannette Washington, M.Ed.</a></h3>
+                  <p>I am Jeannette Washington, M.Ed. <span id="dots">...</span> 
+                    <span id="more_2" style="display: none;">
+                        a former Speech Language Pathologist with nearly a 
+                        decade of experience working with students that exhibit special abilities.
+                        
+                     My expertise in the field was recently solicited at GT Bank's 9th Annual Autism Conference. Learning to code has ignited my passion for special populations in the tech industry. I have spoken at the Mississippi Dyslexia Symposium, A11y Camp Chicago, Pycon Canada, PyCaribbean and participated on a Diversity in WordPress Panel, to name a few. I can always be found tinkering or boasting the importance 
+                     of accessibility, inclusion, cognitive diversity and equity in the tech industry.
+                    </span> 
+                    <br>
+                    <button onclick="myFunction('more_2')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+
+                  </p>
+                  
+                    <div class="social">
+                    <a href="http://www.Twitter.com/BearlyArtic"><i class="fa fa-twitter"></i></a>
+                    <a href="http://www.github.com/jlrwashington"><i class="fa fa-github"></i></a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-4">
+                <div class="speaker">
+                  <img src="{% static 'img/pycon_speakers/Iyanu_Asiri_Chilling_20150824_145932_-_iyanu_ajao.jpg' %}" alt="Speaker 2" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="#">Iyanuoluwa Ajao</a></h3>
+                    <p>
+                        Hi I’m Iyanuoluwa. You can call me Ashiri(meaning Secret). 
+                        <span class="dots">...</span>
+                        <span id="more_3" style="display: none;">
+                          I’m a Software Engineer at Crop2Cash. 
+                          My favourite tool is Python and I have experience using JavaScript and Flutter/Dart.
+                        </span>
+                        <br>
+                        <button onclick="myFunction('more_3')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+    
+                    </p>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <div class="speaker">
+                  <img src="{% static 'img/pycon_speakers/IMG_20190915_150010_-_Victor_Irekponor.jpg' %}" alt="Speaker 2" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="#">Victor Irekponor</a></h3>
+                    <p>
+                        I am an undergrad student of the University of Lagos, Nigeria.
+
+                      <span id="dots">...</span>
+                        <span id="more_4" style="display: none;">
+
+                        I study Urban and Regional Planning (Penultimate Year).
+                        I love Data science and Artificial Intelligence with so much gusto. 
+                        I have about 10 months of industry experience in AI as i work and intern remotely,
+                         while still in school. With over 3 years of Experience in software development and 
+                         Programming
+                        </span> 
+                        <br>
+                        <button onclick="myFunction('more_4')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+    
+                    </p>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4">
+                  <div class="speaker">
+                    <img src="{% static 'img/pycon_speakers/DSCF0952_2_-_Dawid_Pacia.jpg' %}" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                      <h3><a href="#">Dawid Pacia</a></h3>
+                      <p>
+                          Leading and supporting the best and the happiest QA team! 
+                          <span id="dots">...</span>
+                          <span id="more_5" style="display: none;">
+                          Actively speaking (and traveling) around the world (combining both passions).
+                          Organizer and originator of QA meetups “UkrainQA” & “KraQA”
+                          </span>
+                          <br>
+                          <button onclick="myFunction('more_5')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+      
+                      </p>
+                      <div class="social">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/IMG_6522_copy_-_AGATEVURE_GLORY.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Glory Agatevure</a></h3>
+                        <p>
+                            I am a Software Developer and Product Designer
+                            <span id="dots">...</span>
+                            <span id="more_6" style="display: none;">
+                              I help build tech communities. 
+                              I  am the Python Akwa Ibom Lead, founder 
+                              Sheistechy a non governmental organization that help young girls build their careers around tech.  
+                            </span>
+                            <br>
+                            <button onclick="myFunction('more_6')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+        
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/WhatsApp_Image_2019-09-30_at_14.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Dare Sunday</a></h3>
+                        <p>
+                            Team lead and mentor Data Science at Tenece <span id="dots">...</span> Professional Services
+                            <span id="more_7" style="display: none;">
+                                I have a demonstrated history of working on top projects across various industries, skilled in Data Modelling, Data Research, Data Analytics, and Machine Learning.","Understanding what makes Recommendation System Tick and Tock
+                            </span> 
+                            <br>
+                            <button onclick="myFunction('more_7')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+        
+                        </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/Headshot_-_Kehinde_Ogunyale.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Ogunyale Richard Kehinde</a></h3>
+                        <p>
+                            Kehinde is a software Engineer at Chatdesk
+                            <span id="dots">...</span>
+                            <span id="more_8" style="display: none;">
+                             He has a lot of interest in developing Artificial intelligence models that is peculiar to solving African problems. 
+                             He also loves playing Chess.
+                            </span> 
+                            <br>
+                            <button onclick="myFunction('more_8')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                            
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/001Photo_-_CRUX_CONCEPTION.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Crux Conception, M. Psych</a></h3>
+                        <p>
+
+                            Crux resides in Fort Wayne, Indiana, and 
+                            <span id="dots">...</span>
+                            <span id="more_9" style="display: none;">
+                            has over 20 years of Law Enforcement (LEO), Criminal Profiling and teaching experience.
+                            </span> 
+
+                            <br>
+                            <button onclick="myFunction('more_9')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                            
+                        </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/IMG_20190930_151800_-_Abimbola_Olawale_Victor.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Abimbola Olawale Victor</a></h3>
+                        <p>
+                            AI Plus Member of Data Science Nigeria
+                          <span id="dots">...</span>
+                          <span id="more_10" style="display: none;">
+                              Statistician
+                              Data Scientist
+                              AI enthusiast
+                              Emerging machine learning expert
+                          </span>
+                          <br>
+                            <button onclick="myFunction('more_10')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                            
+                          </p>
+                        <div class="social">
+                          <a href="https://twitter.com/bimbolawale"><i class="fa fa-twitter"></i></a>
+                          <a href="https://github.com/olawale0254"><i class="fa fa-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/20190420_135442_-_Diretnan_Domnan.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Diretnan Domnan</a></h3>
+                        <p>
+                            Software developer and avid lover of all 
+                            <span id="dots">...</span>
+                            <span id="more_11" style="display: none;">
+                                things development related, especially AI.
+                                Almost anything science gets me excited. From the Casimir effect to gene editing research down to ancient Greek philosophers. I get a kick from taking it in even when I don't fully grasp it. The status
+                                I aim for is creating ripples throughout history's waters, that is my definition of immortality   
+                            </span>
+
+                          <br>
+                          <button onclick="myFunction('more_11')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>                          
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/G0019756_-_Bakare_Emmanuel.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Bakare Emmanuel Oluwatimilehin</a></h3>
+                        <p>
+                            My name is Bakare Emmanuel, 
+                            <span id="dots">...</span>
+                            <span id="more_12" style="display: none;">
+                                I’ve been using Linux for more than 4 years now and can’t say I’ve ever enjoyed windows after switching. I double as a DevOps Plumber fixing pipelines at DEIMOS ML, a GCP partner across Africa and an LCA/Volunteer Facilitator at Andela. My aim is to become a GDE in Cloud at best.
+                                I’m kind of a fun person with a decade long experience of making people laugh so I can confidently deny being boring. Consider me as your personal hype man for any event!                                
+                                Asides code and Linux, I chill using my hours to sleep, eat and do what normal people do e.g work and play hard.
+                            </span>
+                            <br>
+                            <button onclick="myFunction('more_12')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                        </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/IMG-20190919-WA0006_-_Tolulade_Ademisoye.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Tolulade Ademisoye</a></h3>
+                        <p>
+                            Tolulade Ademisoye is the co-founder  <span id="dots">...</span> 
+                           
+                            <span id="more_13" style="display: none;"> at Reispar
+                            Technologies, a digital energy and IoT startup.
+                            He currently serves as Ambassador to Open Data Science Conference.
+                            </span> 
+                            <br>
+                            <button onclick="myFunction('more_13')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/IMG_20191001_162430_-_Samuel_Nwoye.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Samuel Nwoye</a></h3>
+                        <p>
+                            Samuel Nwoye is an AWS Certified Solutions Architect Associate and Developer <span id="dots">...</span>
+                            <span id="more_14" style="display: none;">
+
+                             Productivity Engineer with a passion for seamless software development workflow. He helps organizations automate the infrastructure and operations end of the software development pipeline. When he is not striking his laptop's keyboard developing systems that enables developer's productivity and automating services
+                             as code he is on his phone stretching his mind playing Chess or reading a psychology book.
+                            </span>
+                            <br>
+                            <button onclick="myFunction('more_14')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/Oranyalinda_-_Linda_Oranya.jpg' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Linda Oranya</a></h3>
+                        <p>
+                            My name is Linda Oranya <span id="dots">....</span> 
+                            <span id="more_15" style="display: none;">
+                            Linda is a graduate of the university of Lagos where she studied Systems Engineering with a focus on data science and machine learning.
+                            Linda works as a data scientist at Terragon group. She loves Programming and mathematics but even more, she loves to solve challenges with them.
+                            </span>
+                            <br>
+                            <button onclick="myFunction('more_15')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="speaker">
+                      <img src="{% static 'img/pycon_speakers/download (4) - Damilola Ogungbesan.png' %}" alt="Speaker 2" class="img-fluid">
+                      <div class="details">
+                        <h3><a href="#">Damilola Ogungbesan</a></h3>
+                        <p>
+                             I'm software developer based in Lagos, with <span>...</span>
+                             <span id="more_17" style="display: none;">
+                             love for research and development, and using knowledge of tech to make it work on auto pilot whilst constantly improving performance.
+                             In my spare time i watch financial and Sci-Fi movies.
+                            </span>
+                            <br>
+                            <button onclick="myFunction('more_17')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                          </p>
+                        <div class="social">
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                          <a href=""><i class="fa fa-google-plus"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="col-lg-4 col-md-4">
+                      <div class="speaker">
+                        <img src="{% static 'img/pycon_speakers/kaffy_IMG-20180103_-_Kafayat_Adeoye.jpg' %}" alt="Speaker 2" class="img-fluid">
+                        <div class="details">
+                          <h3><a href="#">Kafayat Adeoye</a></h3>
+                          <p>
+                              Kafayat Adeoye is the e-Learning <span>...</span>   
+                              <span id="more_18" style="display: none;">
+                                  and IT support officer at
+                               Eko-Konnect Research and Education Initiative. She is a graduate of Electronic Systems Engineering from Yaba College of Technology and the University of Portsmouth.
+                               She provides technical support for Eko-Konnect’s e-learning management system and is responsible for the implementation of changes that enhance users experience of the platform.
+                               Kafayat also develops the training courses and curriculum in Robotics, the Internet of Things (IoT) and Python coding for the Eko-Konnect Campus Technology Internship and Women in WACREN (West & Central Africa Research and Education Network) programs. She also coordinates the organization's maker space and virtual labs where students 
+                               and girls innovatively engage in building interactive smart projects.
+                              </span> 
+                              <br>
+                              <button onclick="myFunction('more_18')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+                            </p>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="col-lg-4 col-md-4">
+                        <div class="speaker">
+                          <img src="{% static 'img/pycon_speakers/_234_814_326_5373__20180207_075335_-_Abdulgafar_Tope.jpg' %}" alt="Speaker 2" class="img-fluid">
+                          <div class="details">
+                            <h3><a href="#">Raji Abdulgafar</a></h3>
+                            <p>
+                                I have 3years experience in cybersecurity <span id="dots">...</span>
+                                <span id="more_19" style="display: none;">
+                                additionally, 
+                                I got certified by Ec-council as a certified ethical hacker. a python lover, some of my tools can be found on https://github.com/abdulgaphy During that time I’ve been trained and certified on a number stacks in cybersecurity which includes webhacking,digital forensics, and cloud security. 
+                                Now I’m looking to take my career to the next level
+                                </span>  
+                                <br>
+                                <button onclick="myFunction('more_19')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                              </p>
+                            <div class="social">
+                              <a href=""><i class="fa fa-twitter"></i></a>
+                              <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                              <a href=""><i class="fa fa-google-plus"></i></a>
+                              <a href=""><i class="fa fa-linkedin"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-4 col-md-4">
+                          <div class="speaker">
+                            <img src="{% static 'img/pycon_speakers/_234_814_326_5373__20180207_075335_-_Abdulgafar_Tope.jpg' %}" alt="Speaker 2" class="img-fluid">
+                            <div class="details">
+                              <h3><a href="#">Izuchukwu Uchegbu</a></h3>
+                              <p>
+                                  A result driven developer that's fun to be around <span id="dots">...</span> 
+                                  <span id="more_21" style="display: none;">
+                                    and code around.
+                                  </span>
+                                  <br>
+                                  <button onclick="myFunction('more_21')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>
+  
+                                </p>
+                              <div class="social">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-4">
+                            <div class="speaker">
+                              <img src="{% static 'img/pycon_speakers/Olasunkanmi_Roseline_O1_-_Olawumi_Olasunkanmi.jpg' %}" alt="Speaker 2" class="img-fluid">
+                              <div class="details">
+                                <h3><a href="#">Olawumi Roseline Olasunkanmi</a></h3>
+                                <p>
+                                    Olawunmi Roseline work as a Machine Learning
+                                    <span id="dots">...</span>
+                                    <span id="more_22" style="display: none;">
+                                        researcher at Data Science Nigeria (DSN) where
+                                        she uses machine learning and (advanced) analytical algorithms to draw insights from structured 
+                                        and semi-structured data. Her research interest is in computer vision with
+                                        specifics to health care and she also loves building and supporting learning communities.
+                                    </span>
+                                    <br>
+                                    <button onclick="myFunction('more_22')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                    </p>
+                                <div class="social">
+                                  <a href="https://www.twitter.com/wumirosey"><i class="fa fa-twitter"></i></a>
+                                  <a href="https://www.github.com/wumirose"><i class="fa fa-github"></i></a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+
+                          <div class="col-lg-4 col-md-4">
+                              <div class="speaker">
+                                <img src="{% static 'img/pycon_speakers/IMG_20181128_190833_-_RO_Williams.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                <div class="details">
+                                  <h3><a href="#">Rising Odegua</a></h3>
+                                  <p>
+                                      Data Scientist and Machine Learning Engineer, <span id="dots">...</span>
+                                      <span id="more_23" style="display: none;">
+
+                                      Knowledge Advocate Data Science Nigeria.
+                                      </span> 
+                                      <br>
+                                      <button onclick="myFunction('more_23')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                     
+                                    </p>
+                                  <div class="social">
+                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.github.com/gconnect"><i class="fa fa-github"></i></a>
+                                    <a href=""><i class="fa fa-google-plus"></i></a>
+                                    <a href=""><i class="fa fa-linkedin"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="col-lg-4 col-md-4">
+                                <div class="speaker">
+                                  <img src="{% static 'img/pycon_speakers/Sarah_-_Sarah_Adigwe.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                  <div class="details">
+                                    <h3><a href="#">Sarah Adigwe </a></h3>
+                                    <p>
+                                        Data Scientist 
+                                        </p>
+                                    <div class="social">
+                                      <a href=""><i class="fa fa-twitter"></i></a>
+                                      <a href="https://www.github.com/sonacrystal"><i class="fa fa-github"></i></a>
+                                      <a href=""><i class="fa fa-google-plus"></i></a>
+                                      <a href=""><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                              <div class="col-lg-4 col-md-4">
+                                  <div class="speaker">
+                                    <img src="{% static 'img/pycon_speakers/IMG_201805132_093617_4_-_Oluwatoyin_Oluwatobi.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                    <div class="details">
+                                      <h3><a href="#">Aliyu Abubakar</a></h3>
+                                      <p>
+                                          Lead Developer Student Clubs IBB University Lapai
+                                          <span id="dots">...</span>
+                                          <span id="more_24" style="display: none;">
+                                           I’m a Software Developer. Started my Journey with python three years ago 
+                                           and I’m so excited to share and give back to the community.
+                                          </span> 
+                                          <br>
+                                        <button onclick="myFunction('more_24')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                      
+                                        </p>
+                                      <div class="social">
+                                        <a href="Https://Twitter.com/@sadiqful_"><i class="fa fa-twitter"></i></a>
+                                        <a href="Https://github.com/sadiqful"><i class="fa fa-github"></i></a>
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="speaker">
+                                      <img src="{% static 'img/pycon_speakers/IMG_5490_-_Adesiji_Blessing.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                      <div class="details">
+                                        <h3><a href="#">  Blessing Adesiji</a></h3>
+                                        <p>
+                                            Blessing is a Data Analyst at Smarterise 
+                                            <span id="dots">...</span>
+                                            <span id="more_25" style="display: none;">
+
+                                            He completed his undergraduate degree in Petroleum Engineering from the University of Ibadan, where he authored a paper on AI applications in oil and gas. He is passionate about how Artificial Intelligence and Machine Learning can transform different sectors. Recently, he tutored at the Data Science Nigeria AI Invasion program. 
+                                            Blessing believes that Africa is the future of AI applications and research.
+                                            </span> 
+
+                                          <br>
+                                          <button onclick="myFunction('more_25')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                        
+                                          </p>
+                                        <div class="social">
+                                          <a href="https://twitter.com/AdesijiBlessing"><i class="fa fa-twitter"></i></a>
+                                          <a href="https://github.com/bleso-a"><i class="fa fa-github"></i></a>
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-4">
+                                      <div class="speaker">
+                                        <img src="{% static 'img/pycon_speakers/DSC_7291-2_-_Psalms_kalu.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                        <div class="details">
+                                          <h3><a href="#">Psalms Kalu
+                                            </a></h3>
+                                          <p>
+                                              Psalms Kalu is a backend engineer with over a decade of experience
+                                              <span id="">...</span>
+                                              <span id="more_26" style="display: none;">
+
+                                              in Web Development and Management. He is the founder and CEO of Ashpot Ltd - a tech company based in Aba, Abia State Nigeria. 
+                                              He began his web development career in 2005 working with Microsoft ASP and IIS. He migrated to PHP some years later and engineered quite a handful of apps with PHP. His search for simplicity, security and efficiency brought him to Django, and he has been a Django developer since then.
+                                              Psalms is currently the lead of Python Abia - a community of Python Developrs in Abia State Nigeria. He is also a co-lead of PyData Aba and a Machine Learning enthusiast.
+                                              </span>
+
+                                          <br>
+                                          <button onclick="myFunction('more_26')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                        
+                                            </p>
+                                          <div class="social">
+                                            <a href="https://twitter.com/psalmskalu"><i class="fa fa-twitter"></i></a>
+                                            <a href="https://github.com/psalmskalu"><i class="fa fa-github"></i></a>
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="speaker">
+                                          <img src="{% static 'img/pycon_speakers/2.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                          <div class="details">
+                                            <h3><a href="#">Marlene Mhangami
+                                              </a></h3>
+                                            <p>
+                                                Marlene is the chair of PyCon Africa,
+                                                <span id="dots">...</span>
+                                                <span id="more_27" style="display: none;">
+                                                    a Director of the Python Software Foundation and the 
+                                                    manager of a technology hub in Harare, Zimbabwe. She is also a co-founder of ZimboPy,
+                                                     a Zimbabwean non-profit that empowers women to pursue careers in technology.  
+                                                  
+                                                </span>
+                                                <br>
+                                                <button onclick="myFunction('more_27')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                      
+                                              </p>
+                                            <div class="social">
+                                              <a href="#"><i class="fa fa-twitter"></i></a>
+                                              <a href="#"><i class="fa fa-github"></i></a>
+                                              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                      <div class="col-lg-4 col-md-4">
+                                          <div class="speaker">
+                                            <img src="{% static 'img/pycon_speakers/haks_-_Habeeb_Shopeju.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                            <div class="details">
+                                              <h3><a href="#">Habeeb Shopeju
+                                                </a></h3>
+                                              <p>
+                                                  Software Engineering Intern at GRIT Systems and <span id="dots">...</span> 
+                                                  <span id="more_30" style="display: none;">
+                                                  Technical Writer.
+                                                  </span>
+                                                  <br>
+                                                  <button onclick="myFunction('more_30')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                        
+                                                </p>
+                                              <div class="social">
+                                                <a href="https://twitter.com/psalmskalu"><i class="fa fa-twitter"></i></a>
+                                                <a href="https://github.com/psalmskalu"><i class="fa fa-github"></i></a>
+                                                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="speaker">
+                                              <img src="{% static 'img/pycon_speakers/0_1_-_Emeka_Boris_Ama.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                              <div class="details">
+                                                <h3><a href="#">Emeka Boris AmaPsalms Kalu
+                                                  </a></h3>
+                                                <p>
+                                                    Hi, Emeka Boris Ama is a Data Science and Artificial intelligence Enthusiast
+                                                    <span id="dots">...</span>
+                                                    <span id="more_32" style="display: none;">
+                                                    , IBM Champion on Analytics, Lead Instructor, School of Data at Gitgirl, Creator of 100Days of Data Science code program.
+                                                    He is passionate about building solution oriented product and educating aspiring Data Scientist and he also enjoys solving problems, troubleshooting issues, and coming up with solutions in a timely manner. He thrives in team settings, and his ability to effectively communicate with others is
+                                                     what drives the motion to solve a variety of problems. He's also interested in food and travel.
+                                                    </span>
+                                                    <br>
+                                                    <button onclick="myFunction('more_32')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                          
+                                                </p>
+                                                <div class="social">
+                                                  <a href="https://twitter.com/emeka_boris"><i class="fa fa-twitter"></i></a>
+                                                  <a href="https://github.com/emekaborisama"><i class="fa fa-github"></i></a>
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    
+                                          <div class="col-lg-4 col-md-4">
+                                              <div class="speaker">
+                                                <img src="{% static 'img/pycon_speakers/33B0C056-871E-4FD2-96A3-E966CF9ACA03_-_Adekanye_Tomi.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                <div class="details">
+                                                  <h3><a href="#">Adekanye Tomi
+                                                    </a></h3>
+                                                  <p>
+                                                      Software developer  
+                                                  </p>
+                                                  <div class="social">
+                                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                                    <a href=""><i class="fa fa-github"></i></a>
+                                                    
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                    
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="speaker">
+                                                  <img src="{% static 'img/pycon_speakers/jammie_-_Monday_sandy.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                  <div class="details">
+                                                    <h3><a href="#">James Sandy
+                                                      </a></h3>
+                                                    <p>
+                                                        Leads AI Saturdays Uyo
+                                                    </p>
+                                                    <div class="social">
+                                                      <a href=""><i class="fa fa-twitter"></i></a>
+                                                      <a href=""><i class="fa fa-github"></i></a>
+                                                      
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                    
+                                              <div class="col-lg-4 col-md-4">
+                                                  <div class="speaker">
+                                                    <img src="{% static 'img/pycon_speakers/20191009_142821_-_yusuf_Abubakar.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                    <div class="details">
+                                                      <h3><a href="#">Mmadu Manaseh Cletus
+                                                        </a></h3>
+                                                      <p>
+                                                          A Developer using Python,
+                                                          <span id="dots">...</span>
+                                                          <span id="more_34" style="display: none;">
+                                                          Shell and Javascript to automate and build  amazing softwares
+                                                          </span>  
+                                                          <br>
+                                                    <button onclick="myFunction('more_34')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                    
+                                                      </p>
+                                                      <div class="social">
+                                                        <a href="https://twitter.com/psalmskalu"><i class="fa fa-twitter"></i></a>
+                                                        <a href="https://github.com/psalmskalu"><i class="fa fa-github"></i></a>
+                                                        
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                    
+                                                <div class="col-lg-4 col-md-4">
+                                                    <div class="speaker">
+                                                      <img src="{% static 'img/pycon_speakers/00100sPORTRAIT_00100_BURST20191011162057890_COVER_2_-_Aminu_Israel.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                      <div class="details">
+                                                        <h3><a href="#">Aminu israel
+                                                          </a></h3>
+                                                        <p>
+                                                            Aminu Israel is a student of Lagos State University <span>...</span> 
+                                                            <span id="dots">...</span>
+                                                            <span id="more_38" style="display: none;">
+                                                                studying Physics in his second year, he is a Python developer who applies the language in the field of Data Science and Web, 
+                                                                he currently takes a Datascience role as an intern at a tech startup(SoftNexus).    
+                                                            </span>
+                                                            <br>
+                                                            <button onclick="myFunction('more_38')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                            
+                                                        </p>
+                                                        <div class="social">
+                                                          <a href=""><i class="fa fa-twitter"></i></a>
+                                                          <a href="https://github.com/AminuIsrael"><i class="fa fa-github"></i></a>
+                                                          
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                    
+                                                  <div class="col-lg-4 col-md-4">
+                                                      <div class="speaker">
+                                                        <img src="{% static 'img/pycon_speakers/_MG_1041_copy_-_Mayowa_Tudonu.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                        <div class="details">
+                                                          <h3><a href="#">Mayowa Tudonu
+                                                            </a></h3>
+                                                          <p>
+                                                              Mayowa is an Ethereum Blockchain Engineer at BuyCoins.africa
+                                                              <span id="dots">...</span>
+                                                              <span id="more_40" style="display: none;">
+
+                                                              He previously worked as a Software Engineer at Jumia and Interswitch. He is currently passionate about  using Blockchain 
+                                                              Technology as means to hold and transfer value from person to person, anywhere in the world.
+                                                              </span>
+                                                              <br>
+                                                              <button onclick="myFunction('more_40')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                              
+                                                            </p>
+                                                          <div class="social">
+                                                            <a href="https://twitter.com/psalmskalu"><i class="fa fa-twitter"></i></a>
+                                                            <a href="https://github.com/psalmskalu"><i class="fa fa-github"></i></a>
+                                                            
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                    
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <div class="speaker">
+                                                          <img src="{% static 'img/pycon_speakers/IMG_20190812_153715_1571119596594_-_Fatimah_Rufai.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                          <div class="details">
+                                                            <h3><a href="#">Fatimah Rufai
+                                                              </a></h3>
+                                                            <p>
+                                                                I am an aspiring physiotherapist
+                                                                <span id="dots">...</span>
+                                                                <span id="more_41" style="display: none;">
+
+                                                                who also wants to become an Artificial Intelligence expert 
+                                                                </span>
+                                                                <br>
+                                                              <button onclick="myFunction('more_41')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                              
+                                                              </p>
+                                                            <div class="social">
+                                                              <a href=""><i class="fa fa-twitter"></i></a>
+                                                              <a href=""><i class="fa fa-github"></i></a>
+                                                              
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                    
+                                                      <div class="col-lg-4 col-md-4">
+                                                          <div class="speaker">
+                                                            <img src="{% static 'img/pycon_speakers/IMG_20191015_213520_-_amina.jpg' %}" alt="Speaker 2" class="img-fluid">
+                                                            <div class="details">
+                                                              <h3><a href="#">Aminah Mardiyyah Rufai
+                                                                </a></h3>
+                                                              <p>
+                                                                  A Machine Learning/Artificial Intelligence Enthusiast 
+                                                                  <span id="dots">...</span>
+                                                                  <span id="more_42" style="display: none;">
+                                                                      with specific interest in building AI-powered solutions for the Health, Agricultural and FInancial Sector respectively. An Alumnus of Youth for Technology foundation (YTF) 3D- Africa, currently working at Brainiacs STEM and Robotics, where i work with Hardware components such as Arduino, Raspberry PI , Microsoft MBot and Microsoft MakeCode Microbit. Also and ambassador and Assistant organizer of Open Data Science Conference in Lagos.
+                                                                  </span>
+
+                                                                <br>
+                                                                <button onclick="myFunction('more_42')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                                
+                                                              </p>
+                                                              <div class="social">
+                                                                <a href="https://twitter.com/psalmskalu"><i class="fa fa-twitter"></i></a>
+                                                                <a href="https://github.com/psalmskalu"><i class="fa fa-github"></i></a>
+                                                                
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                    
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <div class="speaker">
+                                                              <img src="{% static 'img/pycon_speakers/bhagvan_kommadi_prof - Bhagvan Kommadi.png' %}" alt="Speaker 2" class="img-fluid">
+                                                              <div class="details">
+                                                                <h3><a href="#">Bhagvan Kommadi
+                                                                  </a></h3>
+                                                                <p>
+                                                                    Bhagvan Kommadi is the Founder of Architect Corner 
+                                                                    <span id="dots">...</span>
+                                                                    <span id="more_43" style="display: none;">
+                                                                    - AI startup and has around 19 years’ experience in the industry, ranging from large scale enterprise development to helping incubate software product start-ups. He has done Masters in Industrial Systems Engineering at Georgia Institute of Technology (1997) and Bachelors in Aerospace Engineering from Indian Institute of Technology, Madras (1993). He is member of IFX forum,Oracle JCP and participant in Java Community Process.
+                                                                    Bhagvan Kommadi founded Quantica Computacao, the first quantum computing startup in India. Markets and Markets have positioned Quantica Computacao in ‘Emerging Companies’ section of Quantum Computing quadrants. Bhagvan has engineered and developed simulators and tools in the area of quantum technology using IBM Q, Microsoft Q#, and Google QScript. Company's focus is on developing quantum cryptographic tools which will be able to provide quantum proof data security, which will help the banking institution to protect their transactions.  He has published papers and is a speaker in pycon, genomics and biotechnology conferences.He is a hands on CTO who has been contributing to open source , blogs , latest technologies stack like go, python, Django, node.js & java, mysql, postgres, mongo and cassandra. He is an Individual member of Oracle JCP : https://jcp.org/en/participation/members/K. He is the technical reviewer for Packt publishing and reviewed - building-serverless-python-web-services- zappa : https:// www.packtpub.com/application-development/building- serverless-python-web-services-zappa . He has written Packt Publishing - Hands-On Data Structures and Algorithms with Go. He is writing a book titled “Quantum Machine Learning in Python”. He has presented in PyCon before on topics such as Adaptive Learning etc.,
+                                                                    </span>
+
+                                                                <br>
+                                                                <button onclick="myFunction('more_43')" id="myBtn" style="color: whitesmoke;" class = "btn btn-danger">Read more</button>  
+                                                                
+                                                                </p>
+                                                                <div class="social">
+                                                                  <a href="#"><i class="fa fa-twitter"></i></a>
+                                                                  <a href="#"><i class="fa fa-github"></i></a>
+                                                                  
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          
+                                  
+                              
+          </div>
+        </div>
+  
+      </section>
+{% endblock %}

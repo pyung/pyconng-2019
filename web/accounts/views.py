@@ -37,6 +37,10 @@ class profile(TemplateView):
 	template_name = 'accounts/profile.html'
 
 
+class speaker(TemplateView):
+    template_name = "accounts/speakers.html"
+
+
 class TicketPricing(TemplateView):
     template_name = 'accounts/tickets.html'
 

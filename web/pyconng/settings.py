@@ -26,6 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'defaultK3y') #'#g^v-%vj*lt05hb3vx#-pd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get('DEBUG', default=0)) # False
 
+# DEBUG = True
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -159,6 +161,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = 'index'
-
 
 

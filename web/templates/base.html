@@ -30,6 +30,9 @@
 
   <!-- Main Stylesheet File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Main Style -->
+    <link href="{% static 'css/more.css' %}" rel="stylesheet">
+
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -76,6 +79,7 @@
           <li><a href="{%url 'index'%}#contact">Contact</a></li>
           <!-- <li><a href="#contact">Contact</a></li> -->
           <li><a href="{% url 'donate' %}">Sponsorship</a></li>
+          <li><a href="{% url 'speaker'%}">Speakers</a></li>
           <li class="buy-tickets"><a href="{% url 'index' %}#buy-tickets">Purchase Ticket</a></li>
           <li><a href="http://pythonnigeria.org">Python Nigeria</a></li>
           
@@ -186,6 +190,8 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/more.js' %}"></script>
+
 {% endblock js %}
 </body>
 

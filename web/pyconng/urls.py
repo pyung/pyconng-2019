@@ -24,3 +24,4 @@ urlpatterns = [
     # path('proposals/', include('proposals.urls')),
 #     path("paystack", include(('paystack.urls','paystack'),namespace='paystack')),
 ] 
+
