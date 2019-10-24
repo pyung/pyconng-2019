@@ -21,7 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    # path('proposals/', include('proposals.urls')),
-#     path("paystack", include(('paystack.urls','paystack'),namespace='paystack')),
 ] 
 
