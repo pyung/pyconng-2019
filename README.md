@@ -1,8 +1,9 @@
 ### PyconNg-2019
 
-The official website for PyconNg-2019 visit <a herf='http://pycon.pythonnigeria.org/'> link </a>
+The official website for PyconNg-2019 visit [link](http://pycon.pythonnigeria.org/)
 
-Event on the 30th October - 2nd November 2019  Wennovation Hub, 50 Ebitu Ukiwe Street. Jabi, Abuja, Nigeria
+Event on the 30th October - 2nd November 2019  Wennovation Hub, 50 Ebitu Ukiwe Street. Jabi, Abuja,   Nigeria
+
 
 
 ### Install Project
