@@ -54,10 +54,29 @@ class SignInTest(TestCase):
         user = authenticate(username='test', password='wrong')
         self.assertFalse(user is not None and user.is_authenticated)
 
+class SponsorshipViewTest(TestCase):
+    def test_sponsorship_page_view_by_status_code(self):
+        response = self.client.get('/sponsorship')
+        self.assertEquals(response.status_code, 200)
 
-class ProfilePageViewTest(TestCase):
+    def test_sponsorship_page_view_by_name(self):
+        response= self.client.get(reverse('donate'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_index_page_view_template(self):
+        response= self.client.get(reverse('donate'))
+        self.assertTemplateUsed(response, "accounts/sponsorship.html")
+
+
+class ThanksViewTest(TestCase):
     pass
 
 
-class TicketPricingPageViewTest(TestCase):
+class TicketPayCorporateViewTest(TestCase):
+    pass
+
+class TicketPayIndividualViewTest(TestCase):
+    pass
+
+class TicketPayStudentsViewTest(TestCase):
     pass
